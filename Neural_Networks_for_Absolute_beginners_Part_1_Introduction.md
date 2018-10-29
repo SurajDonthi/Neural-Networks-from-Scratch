@@ -49,7 +49,7 @@ Supervised Learning can be further divided into the two tasks as below:
 
 The evolution of AI dates to back to 1950 when Alan Turing, the computer genius, came out with the Turing Test to distinguish between a Human and a Robot. He describes that when a machine performs so well, that we humans are not able to distinguish between the response given by a human and a machine, it has passed the Turing Test. Apparently this feat was achieved only in 2012, when a company named Vicarious cracked the captchas. Check out this video below on how Vicarious broke the captchas.
 
-[![IMAGE ALT TEXT HERE](https://imgur.com/Bt4y9dn)](https://www.youtube.com/watch?v=-H185jPf-7o)
+[![](https://img.youtube.com/vi/-H185jPf-7o/0.jpg)](https://www.youtube.com/watch?v=-H185jPf-7o)
 
 It must be noted that most of the Algorithms that were developed during that period(1950-2000) and now existing, are highly inspired by the working of our brain, the neurons and their structure with how they learn and transfer data. The most popular works include the Perceptron and the Neocognitron $-$(not covered in this article, but in a future article) based on which the Neural Networks have been developed. 
 
@@ -87,7 +87,7 @@ Similarly, an artificial neuron/perceptron can be trained to recognize some of t
 
 In the next section, we'll explore the working of a perceptron and also gain a mathematical intuition.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/xzbHtIrb14s/0.jpg)](https://www.youtube.com/watch?v=xzbHtIrb14s)
+[![](https://img.youtube.com/vi/xzbHtIrb14s/0.jpg)](https://www.youtube.com/watch?v=xzbHtIrb14s)
 
 ## Perceptron/Artificial Neuron
 
