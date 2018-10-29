@@ -49,7 +49,7 @@ Supervised Learning can be further divided into the two tasks as below:
 
 The evolution of AI dates to back to 1950 when Alan Turing, the computer genius, came out with the Turing Test to distinguish between a Human and a Robot. He describes that when a machine performs so well, that we humans are not able to distinguish between the response given by a human and a machine, it has passed the Turing Test. Apparently this feat was achieved only in 2012, when a company named Vicarious cracked the captchas. Check out this video below on how Vicarious broke the captchas.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/-H185jPf-7o/0.jpg)](https://www.youtube.com/watch?v=-H185jPf-7o)
+[![IMAGE ALT TEXT HERE](https://imgur.com/Bt4y9dn)](https://www.youtube.com/watch?v=-H185jPf-7o)
 
 It must be noted that most of the Algorithms that were developed during that period(1950-2000) and now existing, are highly inspired by the working of our brain, the neurons and their structure with how they learn and transfer data. The most popular works include the Perceptron and the Neocognitron $-$(not covered in this article, but in a future article) based on which the Neural Networks have been developed. 
 
@@ -67,9 +67,9 @@ Lastly, this article is directed for those who want to learn about Neural Networ
 
 ## A biological Neuron
 
-<p align="center">
+
 ![Comparison of a Neuron Cell and a Perceptron](https://docs.google.com/drawings/d/e/2PACX-1vSivgdRoiDD8I1uBa1pUk9uALPbsE4LyoSVJpJkxLbT3DqTN-UwAcn4La9jmADG2u-8Ul5dZmDpwVtw/pub?w=3842&h=1698)
-</p>
+
 
 The figure above shows a biological neuron. It has *dendrites* that recieve information from neurons. The recieved information is passed on to the *cell body or the nucleus* of the neuron. The *nucleus* is where the information is processed. The processed information is passed on to the next layer of neurons through the *axons*.
 
@@ -90,7 +90,7 @@ In the next section, we'll explore the working of a perceptron and also gain a m
 ## Perceptron/Artificial Neuron
 
 <p align="center">
- <img src="https://docs.google.com/drawings/d/e/2PACX-1vQi5UtWOScAOVixzrE42U59N2o6ruP8_LgHlTF8fSQH4glqZa6AsbkNxmwWAsYKdcjBmUQSyG5zFCod/pub?w=3720&h=2884" alt="Drawing" width="500"/>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQi5UtWOScAOVixzrE42U59N2o6ruP8_LgHlTF8fSQH4glqZa6AsbkNxmwWAsYKdcjBmUQSyG5zFCod/pub?w=3720&h=2884" alt="Drawing" width="500"/>
 </p>
 
 From the figure, you can observe that the perceptron is a reflection of the biological neuron. The inputs combined with the weights($w_i$) are analogous to dendrties. These values are summed and passed through an activation function (like the thresholding function as shown in fig.). This is analogous to the nucleus. Finally, the activated value is transmitted to the next neuron/perceptron which is analogous to the axons.
