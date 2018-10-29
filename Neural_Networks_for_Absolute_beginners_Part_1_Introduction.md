@@ -67,9 +67,9 @@ Lastly, this article is directed for those who want to learn about Neural Networ
 
 ## A biological Neuron
 
-
-![Comparison of a Neuron Cell and a Perceptron](https://docs.google.com/drawings/d/e/2PACX-1vSivgdRoiDD8I1uBa1pUk9uALPbsE4LyoSVJpJkxLbT3DqTN-UwAcn4La9jmADG2u-8Ul5dZmDpwVtw/pub?w=3842&h=1698)
-
+<p align="center">
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSivgdRoiDD8I1uBa1pUk9uALPbsE4LyoSVJpJkxLbT3DqTN-UwAcn4La9jmADG2u-8Ul5dZmDpwVtw/pub?w=3842&h=1698" width=500>
+</p>
 
 The figure above shows a biological neuron. It has *dendrites* that recieve information from neurons. The recieved information is passed on to the *cell body or the nucleus* of the neuron. The *nucleus* is where the information is processed. The processed information is passed on to the next layer of neurons through the *axons*.
 
@@ -77,7 +77,9 @@ Our brain consists of about 100 billion such neurons which communicate through e
 
 You know that different regions of our brain are activated (/receptive) for different actions like seeing, hearing, creative thinking and so on. This is because the neurons belonging to a specific region in the brain are trained to process a certain kind of information better and hence get activated when only certain kinds of information is being sent.The figure below gives us a better understanding of the different receptive regions of the brain.
 
->>>> ![Different receptive regions of the brain](http://www.md-health.com/images/brain-regions-areas.gif)
+<p align="center">
+<img src="http://www.md-health.com/images/brain-regions-areas.gif" width=400>
+</p>
 
 It has also been shown through the concept of Neuroplasticity that the different regions of the brain can be rewired to perform totally different tasks. Such as the neurons responsible for touch sensing can be rewired to become sensitive to smell. Check out this great TEDx video below to know more about neuroplasticity.
 
