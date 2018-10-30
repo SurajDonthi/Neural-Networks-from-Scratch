@@ -17,7 +17,7 @@ There are 3 situations that you can encounter in this domain:
 1. When you have a lot of data...
 
 <li> Either your data is tagged, labelled, maintained or it is not.
- If the data is available and is fully labelled or tagged, you can train the model based on the given set of input-output pairs and ask the model to predict the output for a new set of data. This type of learning is called **Supervised Learning** (Since, you are giving the input and also mentioning that this is the correct output for the data).
+ If the data is available and is fully labelled or tagged, you can train the model based on the given set of input-output pairs and ask the model to predict the output for a new set of data. This type of learning is called <b>Supervised Learning</b> (Since, you are giving the input and also mentioning that this is the correct output for the data).
 <br><br>
 Supervised Learning can be further divided into the two tasks as below:
 <br>
@@ -31,14 +31,18 @@ Supervised Learning can be further divided into the two tasks as below:
 <img src="http://androidkt.com/wp-content/uploads/2017/07/neural-network.gif" alt="Add figure" width="550"/>
 </p>
 
-<li> When your data is unlabelled, the only option would be to let your model figure out by itself the patterns in the data. This is called **Unsupervised Learning**. <br><br>In the example shown below, you only provide the datapoints and the number of clusters(classes) that has to be formed and let the algorithm find out the best set of clusters.
+<li> When your data is unlabelled, the only option would be to let your model figure out by itself the patterns in the data. This is called <b>Unsupervised Learning</b>. 
+
+>>>In the example shown below, you only provide the datapoints and the number of clusters(classes) that has to be formed and let the algorithm find out the best set of clusters.
 <p align="center">
 <img src="https://sandipanweb.files.wordpress.com/2016/08/kevalc1.gif?w=676" alt="Add figure" width="350"/>
 </p>
 
 2\. When you don't have data but instead have the environment itself to learn!
 
->Here, a learning agent is put in a predefined environment and made to learn by the actions it takes. It is either rewarded or punished based on its actions. This is the most interesting kind of learning and is also where a lot of exploration and research is happenning.It is called **Reinforcement Learning**.<br><br>As it can clearly be seen from the below image that the agent which is modelled as a person, learns to climb the wall through trial and error.
+Here, a learning agent is put in a predefined environment and made to learn by the actions it takes. It is either rewarded or punished based on its actions. This is the most interesting kind of learning and is also where a lot of exploration and research is happenning.It is called **Reinforcement Learning**.
+
+>>>As it can clearly be seen from the below image that the agent which is modelled as a person, learns to climb the wall through trial and error.
 <p align="center">
 <img src="https://storage.googleapis.com/deepmind-live-cms-alt/documents/ezgif.com-resize.gif" alt="Add figure" width="400"/>
 </p>
@@ -95,48 +99,49 @@ In the next section, we'll explore the working of a perceptron and also gain a m
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vQi5UtWOScAOVixzrE42U59N2o6ruP8_LgHlTF8fSQH4glqZa6AsbkNxmwWAsYKdcjBmUQSyG5zFCod/pub?w=3720&h=2884" alt="Drawing" width="500"/>
 </p>
 
-From the figure, you can observe that the perceptron is a reflection of the biological neuron. The inputs combined with the weights($w_i$) are analogous to dendrties. These values are summed and passed through an activation function (like the thresholding function as shown in fig.). This is analogous to the nucleus. Finally, the activated value is transmitted to the next neuron/perceptron which is analogous to the axons.
+From the figure, you can observe that the perceptron is a reflection of the biological neuron. The inputs combined with the weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) are analogous to dendrties. These values are summed and passed through an activation function (like the thresholding function as shown in fig.). This is analogous to the nucleus. Finally, the activated value is transmitted to the next neuron/perceptron which is analogous to the axons.
 
-The latent weights($w_i$) multiplied with each input($x_i$) depicts the significance of the respective input/feature. Larger the value of a weight, more important is the feature. Hence, the weights are what is learned in a perceptron so as to arrive at the required result. An additional bias($b$, here $w_0$) is also learned.
+The latent weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) multiplied with each input(<img src="http://latex.codecogs.com/gif.latex?x_i" title="x_i" />) depicts the significance of the respective input/feature. Larger the value of a weight, more important is the feature. Hence, the weights are what is learned in a perceptron so as to arrive at the required result. An additional bias(<img src="http://latex.codecogs.com/gif.latex?b" title="b" />, here <img src="http://latex.codecogs.com/gif.latex?w_i" title="w_0" />) is also learned.
 
-Hence, when there are multiple inputs (say n), the equation can be generalized as follows: 
-\begin{equation}
-z=w_0+w_1.x_1+w_2.x_2+w_3.x_3+......+w_n.x_n \\
-\therefore z=\sum_{i=0}^{n}w_i.x_i \qquad \text{where } x_0 = 1
-\end{equation}
+Hence, when there are multiple inputs (say <img src="http://latex.codecogs.com/gif.latex?n" title="n" />), the equation can be generalized as follows: 
 
-Finally, the output of summation (assume as $z$) is fed to the *thresholding activation function*, where the function outputs $ -1 \space \text{if } z < 0 \space \& \space 1 \space \text{if } z \geq 0$.
+<p align="center">
+<img src="http://latex.codecogs.com/gif.latex?z=w_0&plus;w_1.x_1&plus;w_2.x_2&plus;w_3.x_3&plus;......&plus;w_n.x_n" title="z=w_0+w_1.x_1+w_2.x_2+w_3.x_3+......+w_n.x_n" />
+<br>
+<img src="http://latex.codecogs.com/gif.latex?\therefore&space;z=\sum_{i=0}^{n}w_i.x_i&space;\qquad&space;\text{where&space;}&space;x_0&space;=&space;1" title="\therefore z=\sum_{i=0}^{n}w_i.x_i \qquad \text{where } x_0 = 1" />
+</p>
+
+Finally, the output of summation (assume as <img src="http://latex.codecogs.com/gif.latex?z" title="z" />) is fed to the *thresholding activation function*, where the function outputs <img src="http://latex.codecogs.com/gif.latex?-1&space;\&space;\text{if&space;}&space;z&space;<&space;0&space;\&space;\&&space;\&space;1&space;\&space;\text{if&space;}&space;z&space;\geq&space;0" title="-1 \ \text{if } z < 0 \ \& \ 1 \ \text{if } z \geq 0" />.
 
 ### An Example
 
 Let us consider our perceptron to perform as *logic gates* to gain more intuition.
 
-Let's choose an $AND \space gate$. The Truth Table for the $AND \space gate$ is shown below:
+Let's choose an <img src="http://latex.codecogs.com/gif.latex?AND&space;\&space;gate" title="AND \ gate" />. The Truth Table for the <img src="http://latex.codecogs.com/gif.latex?AND&space;\&space;gate" title="AND \ gate" /> is shown below:
 
 <p align="center">
  <img src="https://docs.google.com/drawings/d/e/2PACX-1vTBFWuo0jZqGST_0f-zn_oX9u5zmrFQTXDlAu3SZsiOGycQpshBS1HzyxyNJj5iJ7d3AprYyKzjPfYa/pub?w=1441&h=847" alt="Drawing" width="250"/>
 </p>
 
-The perceptron for the $AND \space gate$ can be formed as shown in the figure. It is clear that the perceptron has two inputs (here $x1=A$ and $x2=B$)
+The perceptron for the <img src="http://latex.codecogs.com/gif.latex?AND&space;\&space;gate" title="AND \ gate" /> can be formed as shown in the figure. It is clear that the perceptron has two inputs (here <img src="http://latex.codecogs.com/gif.latex?x_1=A" title="x_1=A" /> and <img src="http://latex.codecogs.com/gif.latex?x_2=B" title="x_2=B" />)
 
 <p align="center">
  <img src="https://docs.google.com/drawings/d/e/2PACX-1vQW2pQ4tL-XVZ09z_dkHiSmrS9-rkoQe7NZz3JMQ1ybErrA9zpDyWIZZVdKhfYhFmbEk3YpPAlT7hx5/pub?w=2783&h=1836" alt="AND Gate" width="300"/>
 </p>
+<p align="center">
+<img src="http://latex.codecogs.com/gif.latex?\text{Threshold&space;Function,}&space;\qquad&space;y&space;=&space;f(z)&space;=&space;\begin{cases}&space;1,&&space;\text{if&space;}z&space;\geq&space;0.5\\&space;0,&&space;\text{if&space;}&space;z<&space;0.5\\&space;\end{cases}" title="\text{Threshold Function,} \qquad y = f(z) = \begin{cases} 1,& \text{if }z \geq 0.5\\ 0,& \text{if } z< 0.5\\ \end{cases}" />
+</p>
 
-\begin{equation}
-\text{Threshold Function,} \qquad y = f(z) = \begin{cases}
-1,& \text{if }z \geq 0.5\\
-0,& \text{if } z< 0.5\\
-\end{cases}
-\end{equation}
+We can see that for inputs <img src="http://latex.codecogs.com/gif.latex?x_1,&space;x_2&space;\&space;and&space;\&space;x_0=1," title="x_1, x_2 \ and \ x_0=1," /> setting their weights as 
+<p align="center">
+<img src="http://latex.codecogs.com/gif.latex?w_0=-0.5," title="w_0=-0.5," />
+<br>
+<img src="http://latex.codecogs.com/gif.latex?w_1=0.6," title="w_1=0.6," />
+<br>
+<img src="http://latex.codecogs.com/gif.latex?w_2=0.6" title="w_2=0.6" />
+</p>
 
-We can see that for inputs $x1$, $x2$ & $x_0=1$, setting their weights as 
-\begin{equation}
-w_0=-0.5, \\
-w_1=0.6, \space \&\\
-w_2=0.6
-\end{equation}
-respectively and keeping the *Threshold function* as the activation function we can arrive at the $AND \space Gate$.
+respectively and keeping the *Threshold function* as the activation function we can arrive at the <img src="http://latex.codecogs.com/gif.latex?AND&space;\&space;Gate" title="AND \ Gate" />.
 
 Now, let's get our hands dirty and codify this and test it out!
 
@@ -164,25 +169,28 @@ def and_perceptron(x1, x2):
     1
     
 
-Similarly for $NOR \space Gate$ the Truth Table is,
+Similarly for <img src="http://latex.codecogs.com/gif.latex?NOR&space;\&space;Gate" title="NOR \ Gate" /> the Truth Table is,
 
 <p align="center">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSdobJruUXwaSoQ6y9IscvyZEfBEY7xyE8pGZXtfVF8ADgTUdPuOWEBKKEWhCUJ2MokyJqEM_bkxiz9/pub?w=1438&h=809" alt="Drawing" width="250"/>
 </p>
 
-The perceptron for $NOR \space Gate$ will be as below:
+The perceptron for <img src="http://latex.codecogs.com/gif.latex?NOR&space;\&space;Gate" title="NOR \ Gate" /> will be as below:
 
 <p align="center">
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vTe0faigDdNNxjlSuc8gBZVY6M5Ew9Mp_F_U_xWVWwsW-KDbJ--8Fq2lUfxT5tYdOukT0Fkv91aXSXh/pub?w=2772&h=1834" alt="AND Gate" width="300"/>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTe0faigDdNNxjlSuc8gBZVY6M5Ew9Mp_F_U_xWVWwsW-KDbJ--8Fq2lUfxT5tYdOukT0Fkv91aXSXh/pub?w=2772&h=1834" alt="NOR Gate" width="300"/>
 </p>
 
 You can set the weights as
-\begin{equation}
-w_0 = 0.5 \\
-w_1 = -0.6 \\
-w_2 = -0.6
-\end{equation}
-so that you obtain a $NOR \space Gate$.
+<p align="center">
+<img src="http://latex.codecogs.com/gif.latex?w_0&space;=&space;0.5" title="w_0 = 0.5" />
+<br>
+<img src="http://latex.codecogs.com/gif.latex?w_1&space;=&space;-0.6" title="w_1 = -0.6" />
+<br>
+<img src="http://latex.codecogs.com/gif.latex?w_2&space;=&space;-0.6" title="w_2 = -0.6" />
+</p>
+
+so that you obtain a <img src="http://latex.codecogs.com/gif.latex?NOR&space;\&space;Gate" title="NOR \ Gate" />.
 
 You can go ahead and implement this in code.
 
@@ -210,7 +218,7 @@ def nor_perceptron(x1, x2):
     0
     
 
-Here, is the Truth Table for $NAND \space Gate$. Go ahead and guess the weights that fits the function and also implement in code.
+Here, is the Truth Table for <img src="http://latex.codecogs.com/gif.latex?NAND&space;\&space;Gate" title="NAND \ Gate" />. Go ahead and guess the weights that fits the function and also implement in code.
 
 <p align="center">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vTZtYQeTz7QELabtZ7-zzrGlXi-p-L6dwF9FZl4x9So6hfxCxdNC4ANhCELmnVDix-38PlIOlPLqhul/pub?w=1440&h=915" alt="Drawing" width="250"/>
@@ -220,15 +228,17 @@ Here, is the Truth Table for $NAND \space Gate$. Go ahead and guess the weights 
 
 If you analyse what you were trying to do in the above examples, you will realize that you were actually trying to adjust the values of the weights to obtain the required output.
 
-Lets consider the NOR Gate example and break it down to very miniscule steps to gain more understanding. 
+Lets consider the <img src="http://latex.codecogs.com/gif.latex?NOR&space;\&space;Gate" title="NOR \ Gate" /> example and break it down to very miniscule steps to gain more understanding. 
 
 What you would usually do first is to simply set some values to the weights and observe the result, say
 
-\begin{equation}
-w_0 = 0.4 \\
-w_1 = 0.7 \\
-w_2 = -0.2
-\end{equation}
+<p align="center">
+<img src="http://latex.codecogs.com/gif.latex?w_0&space;=&space;0.4" title="w_0 = 0.4" />
+<br>
+<img src="http://latex.codecogs.com/gif.latex?w_1&space;=&space;0.7" title="w_1 = 0.7" />
+<br>
+<img src="http://latex.codecogs.com/gif.latex?w_2&space;=&space;-0.2" title="w_2 = -0.2" />
+</p>
 
 Then the output will be as shown in below table:
 <p align="center">
@@ -237,7 +247,7 @@ Then the output will be as shown in below table:
 
 So how can you fix the values of weights so that you get the right output?
 
-By intuition, you can easily observe that $w_0$ must be increased and $w_1$ and $w_2$ must be reduced or rather made negative so that you obtain the actual output. But if you breakdown this intuition, you will observe that you are actually finding the difference between the actual output and the predicted output and finally reflecting that on the weights...
+By intuition, you can easily observe that <img src="http://latex.codecogs.com/gif.latex?w_0" title="w_0" /> must be increased and <img src="http://latex.codecogs.com/gif.latex?w_1" title="w_1" /> and <img src="http://latex.codecogs.com/gif.latex?w_0" title="w_0" /> must be reduced or rather made negative so that you obtain the actual output. But if you breakdown this intuition, you will observe that you are actually finding the difference between the actual output and the predicted output and finally reflecting that on the weights...
 
 This is a very important concept that you will be digging deeper and will  be the core to formulate the ideas behind *gradient descent* and also *backward propagation*.
 
