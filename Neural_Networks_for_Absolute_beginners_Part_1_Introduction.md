@@ -33,7 +33,7 @@ Supervised Learning can be further divided into the two tasks as below:
 
 <li> When your data is unlabelled, the only option would be to let your model figure out by itself the patterns in the data. This is called <b>Unsupervised Learning</b>. 
 
->>>In the example shown below, you only provide the datapoints and the number of clusters(classes) that has to be formed and let the algorithm find out the best set of clusters.
+>>In the example shown below, you only provide the datapoints and the number of clusters(classes) that has to be formed and let the algorithm find out the best set of clusters.
 <p align="center">
 <img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/Images/kmeans.gif" alt="Add figure" width="350"/>
 </p>
@@ -42,7 +42,7 @@ Supervised Learning can be further divided into the two tasks as below:
 
 Here, a learning agent is put in a predefined environment and made to learn by the actions it takes. It is either rewarded or punished based on its actions. This is the most interesting kind of learning and is also where a lot of exploration and research is happenning.It is called **Reinforcement Learning**.
 
->>>As it can clearly be seen from the below image that the agent which is modelled as a person, learns to climb the wall through trial and error.
+>>As it can clearly be seen from the below image that the agent which is modelled as a person, learns to climb the wall through trial and error.
 <p align="center">
 <img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/Images/RL%20Jumping.gif" alt="Add figure" width="400"/>
 </p>
