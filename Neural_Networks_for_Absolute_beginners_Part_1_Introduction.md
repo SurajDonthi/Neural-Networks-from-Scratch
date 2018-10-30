@@ -28,14 +28,14 @@ Supervised Learning can be further divided into the two tasks as below:
 
 >>In the below example, you can see that images are trained against their labels. You test the model by inputting an image and predicting it's class... like a cat.
 <p align="center">
-<img src="http://androidkt.com/wp-content/uploads/2017/07/neural-network.gif" alt="Add figure" width="550"/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/Images/Cats%20and%20Dogs%20CNN.gif" alt="Add figure" width="550"/>
 </p>
 
 <li> When your data is unlabelled, the only option would be to let your model figure out by itself the patterns in the data. This is called <b>Unsupervised Learning</b>. 
 
 >>>In the example shown below, you only provide the datapoints and the number of clusters(classes) that has to be formed and let the algorithm find out the best set of clusters.
 <p align="center">
-<img src="https://sandipanweb.files.wordpress.com/2016/08/kevalc1.gif?w=676" alt="Add figure" width="350"/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/Images/kmeans.gif" alt="Add figure" width="350"/>
 </p>
 
 2\. When you don't have data but instead have the environment itself to learn!
@@ -44,7 +44,7 @@ Here, a learning agent is put in a predefined environment and made to learn by t
 
 >>>As it can clearly be seen from the below image that the agent which is modelled as a person, learns to climb the wall through trial and error.
 <p align="center">
-<img src="https://storage.googleapis.com/deepmind-live-cms-alt/documents/ezgif.com-resize.gif" alt="Add figure" width="400"/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/Images/RL%20Jumping.gif" alt="Add figure" width="400"/>
 </p>
 
 <br><br>This tutorial focuses on Neural Networks which is a part of Supervised Learning.
@@ -53,9 +53,9 @@ Here, a learning agent is put in a predefined environment and made to learn by t
 
 The evolution of AI dates to back to 1950 when Alan Turing, the computer genius, came out with the Turing Test to distinguish between a Human and a Robot. He describes that when a machine performs so well, that we humans are not able to distinguish between the response given by a human and a machine, it has passed the Turing Test. Apparently this feat was achieved only in 2012, when a company named Vicarious cracked the captchas. Check out this video below on how Vicarious broke the captchas.
 
-[![](https://img.youtube.com/vi/-H185jPf-7o/0.jpg)](https://www.youtube.com/watch?v=-H185jPf-7o)
+>>>>>>>>>>[![](https://github.com/SurajDonthi/Article-Tutorials/blob/master/Images/Vivarious.png)](https://www.youtube.com/watch?v=-H185jPf-7o)
 
-It must be noted that most of the Algorithms that were developed during that period(1950-2000) and now existing, are highly inspired by the working of our brain, the neurons and their structure with how they learn and transfer data. The most popular works include the Perceptron and the Neocognitron $-$(not covered in this article, but in a future article) based on which the Neural Networks have been developed. 
+It must be noted that most of the Algorithms that were developed during that period(1950-2000) and now existing, are highly inspired by the working of our brain, the neurons and their structure with how they learn and transfer data. The most popular works include the Perceptron and the Neocognitron - (not covered in this article, but in a future article) based on which the Neural Networks have been developed. 
 
 Now, before you dive into what a perceptron is,  let's make sure you know a bit of all these... Although not necessarily required!
 
@@ -82,7 +82,7 @@ Our brain consists of about 100 billion such neurons which communicate through e
 You know that different regions of our brain are activated (/receptive) for different actions like seeing, hearing, creative thinking and so on. This is because the neurons belonging to a specific region in the brain are trained to process a certain kind of information better and hence get activated when only certain kinds of information is being sent.The figure below gives us a better understanding of the different receptive regions of the brain.
 
 <p align="center">
-<img src="http://www.md-health.com/images/brain-regions-areas.gif" width=600>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/Images/brain-regions-areas.gif" width=600>
 </p>
 
 It has also been shown through the concept of Neuroplasticity that the different regions of the brain can be rewired to perform totally different tasks. Such as the neurons responsible for touch sensing can be rewired to become sensitive to smell. Check out this great TEDx video below to know more about neuroplasticity.
@@ -91,7 +91,7 @@ Similarly, an artificial neuron/perceptron can be trained to recognize some of t
 
 In the next section, we'll explore the working of a perceptron and also gain a mathematical intuition.
 
-[![](https://img.youtube.com/vi/xzbHtIrb14s/0.jpg)](https://www.youtube.com/watch?v=xzbHtIrb14s)
+>>>>>>>>>>[![](https://img.youtube.com/vi/xzbHtIrb14s/0.jpg)](https://www.youtube.com/watch?v=xzbHtIrb14s)
 
 ## Perceptron/Artificial Neuron
 
