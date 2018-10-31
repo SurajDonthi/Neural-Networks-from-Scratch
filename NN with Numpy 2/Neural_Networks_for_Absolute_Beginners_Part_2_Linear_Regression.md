@@ -15,24 +15,19 @@ those concepts to understand Linear Regression.
 Lets assume that there is only one input and bias to the perceptron as shown below:
 
 <p align="center">
-<img src="
-https://docs.google.com/drawings/d/e/
-2PACX-1vQ0sj3f-bHdNDVltSyUEHQqccTNxA9zWCeskyI5pdpbyoWmYODkGc_J_T_8PYdhvUZ5jUJG-XhuU8-D/
-pub?w=2800&h=2168" 
-alt="Drawing" width="600"/>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQ0sj3f-bHdNDVltSyUEHQqccTNxA9zWCeskyI5pdpbyoWmYODkGc_J_T_8PYdhvUZ5jUJG-XhuU8-D/pub?w=2800&h=2168" alt="Drawing" width="600"/>
 </p>
 
 The resulting linear output(i.e., the sum) will be 
-<img src="http://latex.codecogs.com/gif.latex?y&space;=&space;m.x&space;&plus;&space;b" 
-title="y = m.x + b" />. This is the equation of a straight line, 
+<img src="http://latex.codecogs.com/gif.latex?y&space;=&space;m.x&space;&plus;&space;b" title="y = m.x + b" />. 
+This is the equation of a straight line, 
 as shown in the below figure. 
 
 <p align="center">
 <img src="http://mathonweb.com/help_ebook/html/equations_1/eqs21.gif" alt="Drawing" width="300"/>
 </p>
 
-*It must be noted here that when no activation function is used, 
-we can say that the acitvation function is linear.*
+*It must be noted here that when no activation function is used, we can say that the acitvation function is linear.*
 
 This is a <b>multivariate(multiple variables) linear equation.</b>
 
@@ -47,8 +42,7 @@ Fitting a linear equation on a given set of data in
 space is called <b>Linear Regression</b>. The image below shows an example of Linear Regression. 
 
 <p align="center">
-<img src="https://cdn-images-1.medium.com/max/1600/1*eeIvlwkMNG1wSmj3FR6M2g.gif" 
-alt="Drawing" width="500"/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*eeIvlwkMNG1wSmj3FR6M2g.gif" alt="Drawing" width="500"/>
 </p>
 
 In simple words, you try to find the best values of 
@@ -69,7 +63,7 @@ How does it learn to predict?
 
 Let's learn this on the go!
 
-Let's start importing the required packages.
+Let's start by importing the required packages.
 
 
 ```python
@@ -107,8 +101,8 @@ is a rich package with many machine learning algorithms.
 Although, you get prebuilt functions for performing linear 
 regression, you are going to build it from scratch.
 
-For creating the dataset, you must first set a list of hyperparameters $-$ 
-while $m$ and $b$ are parameters, the number of samples, the number of 
+For creating the dataset, you must first set a list of hyperparameters - 
+while <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> are parameters, the number of samples, the number of 
 input features, the number of neurons, the learning rate, the number 
 of iterations/epochs for training etc. are called hyperparameters. 
 You shall learn about these hyperparameters as you implement the algorithm.
@@ -165,18 +159,20 @@ def plot_graph(X, y):
 ```python
 >>>plot_graph(X, y)
 ```
-
-
-![png](output_16_0.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_16_0.png/>
+</p>
 
 
 Let's check the shape of the vectors for consistency.
+
 
 
 ```python
 >>>print('Shape of vector X:', X.shape)
 >>>print('Shape of vector y:', y.shape)
 ```
+
 
     Shape of vector X: (200, 1)
     Shape of vector y: (200,)
@@ -312,7 +308,10 @@ def plot_pred_line(X, y, m, b):
 ```
 
 
-![png](output_32_0.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_32_0.png/>
+</p>
+
 
 
 Since the line is now generated, you'll need to predict the 
@@ -321,12 +320,11 @@ of <img src="http://latex.codecogs.com/gif.latex?x" title="x" />.
 From this value, all there is to do is to calculate 
 their mean squared error.
 
-Let us predict the values of <img src="http://latex.codecogs.com/gif.latex?y(y_{pred})" 
-title="y(y_{pred})" /> 
+Let us predict the values of <img src="http://latex.codecogs.com/gif.latex?y(y_{pred})" title="y(y_{pred})" /> 
 from the parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> & 
 <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> given the datapoints 
 <img src="http://latex.codecogs.com/gif.latex?X_{train}" title="X_{train}" /> 
-by defining a function ```forward_prop```
+by defining a function ```forward_prop```.
 
 
 ```python
@@ -351,26 +349,20 @@ for <img src="http://latex.codecogs.com/gif.latex?y(y_{pred})" title="y(y_{pred}
 calculate the Cost/Error/Loss Function. We shall stick to the term Loss. 
 
 For the <img src="http://latex.codecogs.com/gif.latex?Loss" title="Loss" />, you must compute 
-the <img src="http://latex.codecogs.com/gif.latex?Mean&space;\&space;Squared&space;\&space;Error$" 
-title="Mean \ Squared \ Error$" /> and minimize it.
+the <img src="http://latex.codecogs.com/gif.latex?Mean&space;\&space;Squared&space;\&space;Error$" title="Mean \ Squared \ Error$" /> and minimize it.
 
-The <img src="http://latex.codecogs.com/gif.latex?Loss(Mean&space;\&space;Squared&space;\
-&space;Error)" 
-title="Loss(Mean \ Squared \ Error)" /> is:
+The <img src="http://latex.codecogs.com/gif.latex?Loss(Mean&space;\&space;Squared&space;\&space;Error)" title="Loss(Mean \ Squared \ Error)" /> is:
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?MSE&space;=&space;(y'^{(i)}&space;-&space;y^{(i)})^2" 
-title="MSE = (y'^{(i)} - y^{(i)})^2" />
+<img src="http://latex.codecogs.com/gif.latex?MSE&space;=&space;(y'^{(i)}&space;-&space;y^{(i)})^2" title="MSE = (y'^{(i)} - y^{(i)})^2" />
 </p>
 
 <br>Summing over all <img src="http://latex.codecogs.com/gif.latex?M" title="M" /> examples, 
-we obtain the <img src="http://latex.codecogs.com/gif.latex?Cost/Loss&space;\&space;fn." 
-title="Cost/Loss \ fn." /> 
+we obtain the <img src="http://latex.codecogs.com/gif.latex?Cost/Loss&space;\&space;fn." title="Cost/Loss \ fn." /> 
 as below:
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?L&space;=&space;\frac{1}{2M}\sum_{i=0}^M(y'
-^{(i)}&space;-&space;y^{(i)})^2" title="L = \frac{1}{2M}\sum_{i=0}^M(y'^{(i)} - y^{(i)})^2" />
+<img src="http://latex.codecogs.com/gif.latex?L&space;=&space;\frac{1}{2M}\sum_{i=0}^M(y'^{(i)}&space;-&space;y^{(i)})^2" title="L = \frac{1}{2M}\sum_{i=0}^M(y'^{(i)} - y^{(i)})^2" />
 </p>
 
 Hence, our goal would be to minimize the $Loss$ thereby fitting the curve.
@@ -472,16 +464,15 @@ and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />.
 >>>plot_pred_line(X_train, y_train, m, b,losses)
 ```
 
-
-![png](output_44_0.png)
-
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_44_0.png/>
+</p>
 
 Now that you have computed the loss, let's minimize it.
 
 ## Gradient Descent for Linear Regression
 
-Since, $Loss$ is the dependent variable and <img src="http://latex.codecogs.com/gif.latex?m" 
-title="m" /> 
+Since, $Loss$ is the dependent variable and <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
 & <img src="http://latex.codecogs.com/gif.latex?c" title="c" /> are the independent variables, 
 we'll have to update <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
 & <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> so as to find the minimum Loss.
@@ -503,8 +494,7 @@ Let's say the optimum value of <img src="http://latex.codecogs.com/gif.latex?p" 
 <img src="http://latex.codecogs.com/gif.latex?a" title="a" />.
 
 <p align="center">
-<img src="https://cdn-images-1.medium.com/max/1600/1*pwPIG-GWHyaPVMVGG5OhAQ.gif" alt="Drawing" 
-width="800"/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*pwPIG-GWHyaPVMVGG5OhAQ.gif" alt="Drawing" width="800"/>
 </p>
 
 Let's gain a bit of intuition as to what the graph is saying.
@@ -518,18 +508,15 @@ moves away from it, the cost increase.
 <b>Now, how can we make <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
 move towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />
 , whether it is on the 
-left or to the right of $a$ as shown in figure?</b>
+left or to the right of <img src="http://latex.codecogs.com/gif.latex?a" title="a" /> as shown in figure?</b>
 
 Let us consider the <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
 of the curve. From calculus, we know that 
 the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> 
 of a curve at a point is 
-given by <img src="http://latex.codecogs.com/gif.latex?\mathrm&space;dy/\mathrm&space;dx" 
-title="\mathrm dy/\mathrm dx" />
-(here it is <img src="http://latex.codecogs.com/gif.latex?
-\mathrm&space;dL/\mathrm&space;dp" title="\mathrm dL/\mathrm dp" /> 
-where <img src="http://latex.codecogs.com/gif.latex?L&space;\rightarrow&space;Loss" 
-title="L \rightarrow Loss" />). From the fig., 
+given by <img src="http://latex.codecogs.com/gif.latex?\mathrm&space;dy/\mathrm&space;dx" title="\mathrm dy/\mathrm dx" />
+(here it is <img src="http://latex.codecogs.com/gif.latex?\mathrm&space;dL/\mathrm&space;dp" title="\mathrm dL/\mathrm dp" /> 
+where <img src="http://latex.codecogs.com/gif.latex?L&space;\rightarrow&space;Loss" title="L \rightarrow Loss" />). From the fig., 
 when <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
 is to the right of 
 <img src="http://latex.codecogs.com/gif.latex?a" title="a" />, 
@@ -548,14 +535,8 @@ Likewise, some value must subtracted when
 is to the right of <img src="http://latex.codecogs.com/gif.latex?a" title="a" />.
 
 This means that when 
-<img src="http://latex.codecogs.com/gif.latex?slope&space;\rightarrow&space;-ve&space;\
-implies&space;p&space;=&space;p&space;&plus;&space;(some&space;\space&space;val.)" 
-title="slope \rightarrow -ve \implies p = p + (some \space val.)" /> 
-and when 
-<img src="http://latex.codecogs.com/gif.latex?slope&space;\
-rightarrow&space;&plus;ve&space;\implies&space;p&space;=&space;p&space;-&space;
-(some&space;\space&space;val.)" 
-title="slope \rightarrow +ve \implies p = p - (some \space val.)" /> 
+<img src="http://latex.codecogs.com/gif.latex?slope&space;\rightarrow&space;-ve&space;\implies&space;p&space;=&space;p&space;&plus;&space;(some&space;\space&space;val.)" title="slope \rightarrow -ve \implies p = p + (some \space val.)" /> 
+and when <img src="http://latex.codecogs.com/gif.latex?slope&space;\rightarrow&space;&plus;ve&space;\implies&space;p&space;=&space;p&space;-&space;(some&space;\space&space;val.)" title="slope \rightarrow +ve \implies p = p - (some \space val.)" /> 
 to move towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />
 
 <img src="http://latex.codecogs.com/gif.latex?\therefore" title="\therefore" /> 
@@ -566,17 +547,11 @@ This way, slope is negated so that it could be appropriately
 added or subtracted.The resulting equation would be, 
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?
-p&space;=&space;p&space;-&space;slope" 
-title="p = p - slope" />
+<img src="http://latex.codecogs.com/gif.latex?p&space;=&space;p&space;-&space;slope" title="p = p - slope" />
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?=&space;p&space;-&space;
-\dfrac{\mathrm&space;dL}{\mathrm&space;dp}" 
-title="= p - \dfrac{\mathrm dL}{\mathrm dp}" />
+<img src="http://latex.codecogs.com/gif.latex?=&space;p&space;-&space;\dfrac{\mathrm&space;dL}{\mathrm&space;dp}" title="= p - \dfrac{\mathrm dL}{\mathrm dp}" />
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?\
-implies&space;p&space;=&space;p&space;-&space;\mathrm&space;dp" 
-title="\implies p = p - \mathrm dp" />
+<img src="http://latex.codecogs.com/gif.latex?\implies&space;p&space;=&space;p&space;-&space;\mathrm&space;dp" title="\implies p = p - \mathrm dp" />
 
 It must also be observed that if the cost is too high, 
 the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" />
@@ -591,15 +566,13 @@ value of <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" />
  so that <img src="http://latex.codecogs.com/gif.latex?p" title="p" />
  does not overshoot <img src="http://latex.codecogs.com/gif.latex?a" title="a" />. 
 Therefore, we introduce a dampening factor called 
-<img src="http://latex.codecogs.com/gif.latex?Learning&space;\&space;Rate&space;(\alpha)" 
-title="Learning \ Rate (\alpha)" />
+<img src="http://latex.codecogs.com/gif.latex?Learning&space;\&space;Rate&space;(\alpha)" title="Learning \ Rate (\alpha)" />
 to the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" />.
 
 What we finally obtain would be,
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?p&space;=&space;p&space;-&space;
-\alpha&space;.\mathrm&space;dp" title="p = p - \alpha .\mathrm dp" />
+<img src="http://latex.codecogs.com/gif.latex?p&space;=&space;p&space;-&space;\alpha&space;.\mathrm&space;dp" title="p = p - \alpha .\mathrm dp" />
 
 A shown in the figure, the trajectory taken by 
 <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> against 
@@ -613,8 +586,7 @@ In our case, we use two parameters
 and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />. 
 Therefore, the bel curve would be *3-dimensional* as shown in the below figure.
 <p align="center">
-<img src="https://media.giphy.com/media/O9rcZVmRcEGqI/giphy.gif" 
-alt="Drawing" width="700"/>
+<img src="https://media.giphy.com/media/O9rcZVmRcEGqI/giphy.gif" alt="Drawing" width="700"/>
 </p>
 
 We compute the partial derivative of the loss function w.r.t to the 
@@ -622,21 +594,14 @@ parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> &
 <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> to obtain i.e.,
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;L}
-{\partial&space;m}&space;=&space;\partial{m}&space;=&space;
-\frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)}&space;-&space;y^{(i)}\Big).x^{(i)}\qquad--(1)" 
-title="\frac{\partial L}{\partial m} = \partial{m} = \frac{1}{M}.\sum_{i=0}^M
-\Big(y'^{(i)} - y^{(i)}\Big).x^{(i)}\qquad--(1)" />
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;L}{\partial&space;m}&space;=&space;\partial{m}&space;=&space;
+\frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)}&space;-&space;y^{(i)}\Big).x^{(i)}\qquad--(1)" title="\frac{\partial L}{\partial m} = \partial{m} = \frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)} - y^{(i)}\Big).x^{(i)}\qquad--(1)" />
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?\&" title="\&" /> 
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?\quad&space;\frac{\partial&space;L}
-{\partial&space;b}&space;=&space;\partial{b}&space;=&space;\frac{1}{M}.\sum_{i=0}^M\
-Big(y'^{(i)}&space;-&space;y^{(i)}\Big)\qquad\qquad--(2)" 
-title="\quad \frac{\partial L}{\partial b} = \partial{b} = \frac{1}{M}.\sum_{i=0}^M\
-Big(y'^{(i)} - y^{(i)}\Big)\qquad\qquad--(2)" />
+<img src="http://latex.codecogs.com/gif.latex?\quad&space;\frac{\partial&space;L}{\partial&space;b}&space;=&space;\partial{b}&space;=&space;\frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)}&space;-&space;y^{(i)}\Big)\qquad\qquad--(2)" title="\quad \frac{\partial L}{\partial b} = \partial{b} = \frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)} - y^{(i)}\Big)\qquad\qquad--(2)" />
 
 
 ```python
@@ -650,14 +615,10 @@ def grad_desc(m, b, X_train, y_train, y_pred):
 ### Updating the parameters
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?m&space;=&space;m&space;-&space;
-\alpha&space;.&space;\partial{m}&space;\qquad\qquad\qquad\&space;--(3)\\" 
-title="m = m - \alpha . \partial{m} \qquad\qquad\qquad--(3)\\" />
+<img src="http://latex.codecogs.com/gif.latex?m&space;=&space;m&space;-&space;\alpha&space;.&space;\partial{m}&space;\qquad\qquad\qquad\&space;--(3)\\" title="m = m - \alpha . \partial{m} \qquad\qquad\qquad--(3)\\" />
 </p>
 <p align="center>
-<img src="http://latex.codecogs.com/gif.latex?b&space;=&space;b&space;-&space;
-\alpha&space;.&space;\partial{b}&space;\qquad\qquad\qquad\&space;--(4)" 
-title="b = b - \alpha . \partial{b} \qquad\qquad\qquad\ --(4)" />
+<img src="http://latex.codecogs.com/gif.latex?b&space;=&space;b&space;-&space;\alpha&space;.&space;\partial{b}&space;\qquad\qquad\qquad\&space;--(4)" title="b = b - \alpha . \partial{b} \qquad\qquad\qquad\ --(4)" />
 </p>
 
 
@@ -738,64 +699,73 @@ for i in range(epochs):
 del losses[:]
 ```
 
-
-![png](output_58_0.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_0.png/>
+</p>
 
 
     Epoch:  0
     Loss =  2934.082243250548
     
 
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_2.png/>
+</p>
 
-![png](output_58_2.png)
 
 
     Epoch:  10
     Loss =  1246.3617292447889
     
 
-
-![png](output_58_4.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_4.png/>
+</p>
 
 
     Epoch:  20
     Loss =  546.310951004311
     
 
-
-![png](output_58_6.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_6.png/>
+</p>
 
 
     Epoch:  30
     Loss =  255.88020867147344
     
 
-
-![png](output_58_8.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_8.png/>
+</p>
 
 
     Epoch:  40
     Loss =  135.36914932067438
     
 
-
-![png](output_58_10.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_10.png/>
+</p>
 
 
     Epoch:  50
     Loss =  85.35744394597806
     
 
-
-![png](output_58_12.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_12.png/>
+</p>
 
 
     Epoch:  60
     Loss =  64.60029693013243
     
 
-
-![png](output_58_14.png)
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_14.png/>
+</p>
 
 ## Prediction
 
@@ -819,7 +789,9 @@ print('b = ', b)
     Accuracy = 80.1676%
     
 
-
+<p align="center">
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_16.png/>
+</p>
 ![png](output_58_16.png)
 
 
@@ -833,9 +805,7 @@ print('b = ', b)
 
 Now, let us consider scaling this up to a 2 layer network as shown in the below figure.
 <p align="center">
-<img src="https://docs.google.com/drawings/d/e/
-2PACX-1vQGsJESLwUjPIqrxaK4tZBsOBNuSQbzl0RKd0vL3nV8-QEf8rbP6ZqbKTszCUxdgvzcCSgl6WTQikSu/
-pub?w=3649&h=2880" alt="two layer network with Linear Activation Function." width="600"/>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQGsJESLwUjPIqrxaK4tZBsOBNuSQbzl0RKd0vL3nV8-QEf8rbP6ZqbKTszCUxdgvzcCSgl6WTQikSu/pub?w=3649&h=2880" alt="two layer network with Linear Activation Function." width="600"/>
 </p>
 
 From the image, we observe that there are two inputs each to the 
@@ -843,15 +813,7 @@ two neurons in the first layer and an output neuron in the second layer.
 
 We can represent them in vector form as:
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?z_1^{[1]}&space;=&space;x.w_1^{[1]}&space;
-\\&space;\\&space;=&space;\begin{bmatrix}&space;x_0&space;&&space;x_1&space;
-&&space;x_2&space;\end{bmatrix}&space;.&space;\begin{bmatrix}&space;w_{10}^{[1]}&space;
-\\&space;w_{11}^{[1]}&space;\\&space;w_{12}^{[1]}&space;\end{bmatrix}\\&space;\\&space;
-\\&space;=&space;w_{10}^{[1]}&space;&plus;&space;w_{11}^{[1]}.x_1&space;&plus;&space;
-w_{12}^{[1]}.x_2,&space;\\" 
-title="z_1^{[1]} = x.w_1^{[1]} \\ \\ = \begin{bmatrix} x_0 & x_1 & x_2 \end{bmatrix} . 
-\begin{bmatrix} w_{10}^{[1]} \\ w_{11}^{[1]} \\ w_{12}^{[1]} \end{bmatrix}\\ \\ 
-\\ = w_{10}^{[1]} + w_{11}^{[1]}.x_1 + w_{12}^{[1]}.x_2, \\" />
+<img src="http://latex.codecogs.com/gif.latex?z_1^{[1]}&space;=&space;x.w_1^{[1]}&space;\\&space;\\&space;=&space;\begin{bmatrix}&space;x_0&space;&&space;x_1&space;&&space;x_2&space;\end{bmatrix}&space;.&space;\begin{bmatrix}&space;w_{10}^{[1]}&space;\\&space;w_{11}^{[1]}&space;\\&space;w_{12}^{[1]}&space;\end{bmatrix}\\&space;\\&space;\\&space;=&space;w_{10}^{[1]}&space;&plus;&space;w_{11}^{[1]}.x_1&space;&plus;&space;w_{12}^{[1]}.x_2,&space;\\" title="z_1^{[1]} = x.w_1^{[1]} \\ \\ = \begin{bmatrix} x_0 & x_1 & x_2 \end{bmatrix} . \begin{bmatrix} w_{10}^{[1]} \\ w_{11}^{[1]} \\ w_{12}^{[1]} \end{bmatrix}\\ \\ \\ = w_{10}^{[1]} + w_{11}^{[1]}.x_1 + w_{12}^{[1]}.x_2, \\" />
 
 While doing matrix computations, we'll need to take care of the dimensions 
 and multiply. Hence, we rearrange a bit to arrive at the required output.
@@ -859,41 +821,27 @@ and multiply. Hence, we rearrange a bit to arrive at the required output.
 The expansion of the equation is not required and hence let's stick to 
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?z_1^{[1]}&space;=&space;x.w_1^{[1]}" 
-title="z_1^{[1]} = x.w_1^{[1]}" />
+<img src="http://latex.codecogs.com/gif.latex?z_1^{[1]}&space;=&space;x.w_1^{[1]}" title="z_1^{[1]} = x.w_1^{[1]}" />
 
 
 Similarly, the value of 
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?z_2^{[1]}&space;=&space;x.w_2^{[1]}" 
-title="z_2^{[1]} = x.w_2^{[1]}" />
+<img src="http://latex.codecogs.com/gif.latex?z_2^{[1]}&space;=&space;x.w_2^{[1]}" title="z_2^{[1]} = x.w_2^{[1]}" />
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?\therefore&space;z^{[1]}&space;=&space;
-\begin{bmatrix}&space;z_1^{[1]}&space;&&space;z_2^{[1]}&space;\end{bmatrix}" 
-title="\therefore z^{[1]} = \begin{bmatrix} z_1^{[1]} & z_2^{[1]} \end{bmatrix}" />
+<img src="http://latex.codecogs.com/gif.latex?\therefore&space;z^{[1]}&space;=&space;\begin{bmatrix}&space;z_1^{[1]}&space;&&space;z_2^{[1]}&space;\end{bmatrix}" title="\therefore z^{[1]} = \begin{bmatrix} z_1^{[1]} & z_2^{[1]} \end{bmatrix}" />
 
 
-Now the ouput from the <img src="http://latex.codecogs.com/gif.latex?2^{nd}" 
-title="2^{nd}" /> 
+Now the ouput from the <img src="http://latex.codecogs.com/gif.latex?2^{nd}" title="2^{nd}" /> 
 layer will be:
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?z^{[2]}&space;=&space;z^{[1]}.w^{[2]}&space;
-=&space;w_{0}^{[2]}&space;&plus;&space;w_{1}^{[2]}.z_1^{[1]}&space;&plus;&space;w_{2}^{[2]}.
-z_2^{[1]}" 
-title="z^{[2]} = z^{[1]}.w^{[2]} = w_{0}^{[2]} + w_{1}^{[2]}.z_1^{[1]} + w_{2}^{[2]}.z_2^{[1]}" />
+<img src="http://latex.codecogs.com/gif.latex?z^{[2]}&space;=&space;z^{[1]}.w^{[2]}&space;=&space;w_{0}^{[2]}&space;&plus;&space;w_{1}^{[2]}.z_1^{[1]}&space;&plus;&space;w_{2}^{[2]}.z_2^{[1]}" title="z^{[2]} = z^{[1]}.w^{[2]} = w_{0}^{[2]} + w_{1}^{[2]}.z_1^{[1]} + w_{2}^{[2]}.z_2^{[1]}" />
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?=&space;w_{0}^{[2]}&space;&plus;
-&space;w_{1}^{[2]}.(x.w_1^{[1]})&space;&plus;&space;w_{2}^{[2]}.(x.w_2^{[1]})" 
-title="= w_{0}^{[2]} + w_{1}^{[2]}.(x.w_1^{[1]}) + w_{2}^{[2]}.(x.w_2^{[1]})" />
+<img src="http://latex.codecogs.com/gif.latex?=&space;w_{0}^{[2]}&space;&plus;&space;w_{1}^{[2]}.(x.w_1^{[1]})&space;&plus;&space;w_{2}^{[2]}.(x.w_2^{[1]})" title="= w_{0}^{[2]} + w_{1}^{[2]}.(x.w_1^{[1]}) + w_{2}^{[2]}.(x.w_2^{[1]})" />
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?\implies&space;z^{[2]}&space;=&space;w_0'
-&space;&plus;&space;w_1'.x&space;\qquad&space;\text{[where,&space;}&space;w_0'
-&space;\&space;\&&space;\&space;w_1'&space;\text{are&space;some&space;values]}" 
-title="\implies z^{[2]} = w_0' + w_1'.x \qquad \text{[where, } w_0' \ \& \ w_1' 
-\text{are some values]}" />
+<img src="http://latex.codecogs.com/gif.latex?\implies&space;z^{[2]}&space;=&space;w_0'&space;&plus;&space;w_1'.x&space;\qquad&space;\text{[where,&space;}&space;w_0'&space;\&space;\&&space;\&space;w_1'&space;\text{are&space;some&space;values]}" title="\implies z^{[2]} = w_0' + w_1'.x \qquad \text{[where, } w_0' \ \& \ w_1' \text{are some values]}" />
 
 From the above set of equations, we see that a neural network 
 with a linear activation function reduces to a *linear equation*. 
