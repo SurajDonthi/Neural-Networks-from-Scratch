@@ -536,13 +536,9 @@ is to the right of <img src="http://latex.codecogs.com/gif.latex?a" title="a" />
 This means that when 
 <img src="http://latex.codecogs.com/gif.latex?slope&space;\rightarrow&space;-ve&space;\implies&space;p&space;=&space;p&space;&plus;&space;(some&space;\space&space;val.)" title="slope \rightarrow -ve \implies p = p + (some \space val.)" /> 
 and when <img src="http://latex.codecogs.com/gif.latex?slope&space;\rightarrow&space;&plus;ve&space;\implies&space;p&space;=&space;p&space;-&space;(some&space;\space&space;val.)" title="slope \rightarrow +ve \implies p = p - (some \space val.)" /> 
-to move towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />
+to move towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />.
 
-<img src="http://latex.codecogs.com/gif.latex?\therefore" title="\therefore" /> 
-We subtract 
-<img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> itself to 
-<img src="http://latex.codecogs.com/gif.latex?p" title="a" />. 
-This way, slope is negated so that it could be appropriately 
+<img src="http://latex.codecogs.com/gif.latex?\therefore" title="\therefore" /> We subtract <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> itself to <img src="http://latex.codecogs.com/gif.latex?p" title="a" />. This way, slope is negated so that it could be appropriately 
 added or subtracted.The resulting equation would be, 
 
 <p align="center">
@@ -615,8 +611,8 @@ def grad_desc(m, b, X_train, y_train, y_pred):
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?m&space;=&space;m&space;-&space;\alpha&space;.&space;\partial{m}&space;\qquad\qquad\qquad\&space;--(3)\\" title="m = m - \alpha . \partial{m} \qquad\qquad\qquad--(3)\\" />
 </p>
-<p align="center>
-<img src="http://latex.codecogs.com/gif.latex?b&space;=&space;b&space;-&space;\alpha&space;.&space;\partial{b}&space;\qquad\qquad\qquad\&space;--(4)" title="b = b - \alpha . \partial{b} \qquad\qquad\qquad\ --(4)" />
+<p align="center">
+<img src="http://latex.codecogs.com/gif.latex?b&space;=&space;b&space;-&space;\alpha&space;.&space;\partial{b}&space;\qquad\qquad\qquad\&space;--(4)\\" title="b = b - \alpha . \partial{b} \qquad\qquad\qquad--(4)\\" />
 </p>
 
 
