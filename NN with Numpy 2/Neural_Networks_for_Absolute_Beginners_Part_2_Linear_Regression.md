@@ -160,7 +160,7 @@ def plot_graph(X, y):
 >>>plot_graph(X, y)
 ```
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_16_0.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_16_0.png"/>
 </p>
 
 
@@ -308,7 +308,7 @@ def plot_pred_line(X, y, m, b):
 
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_32_0.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_32_0.png" />
 </p>
 
 
@@ -464,14 +464,14 @@ and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />.
 ```
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_44_0.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_44_0.png" />
 </p>
 
 Now that you have computed the loss, let's minimize it.
 
 ## Gradient Descent for Linear Regression
 
-Since, $Loss$ is the dependent variable and <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
+Since, <img src="http://latex.codecogs.com/gif.latex?Loss" title="Loss" /> is the dependent variable and <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
 & <img src="http://latex.codecogs.com/gif.latex?c" title="c" /> are the independent variables, 
 we'll have to update <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
 & <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> so as to find the minimum Loss.
@@ -593,8 +593,7 @@ parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> &
 <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> to obtain i.e.,
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;L}{\partial&space;m}&space;=&space;\partial{m}&space;=&space;
-\frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)}&space;-&space;y^{(i)}\Big).x^{(i)}\qquad--(1)" title="\frac{\partial L}{\partial m} = \partial{m} = \frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)} - y^{(i)}\Big).x^{(i)}\qquad--(1)" />
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;L}{\partial&space;m}&space;=&space;\partial{m}&space;=&space;\frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)}&space;-&space;y^{(i)}\Big).x^{(i)}\qquad--(1)" title="\frac{\partial L}{\partial m} = \partial{m} = \frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)} - y^{(i)}\Big).x^{(i)}\qquad--(1)" />
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?\&" title="\&" /> 
@@ -699,7 +698,7 @@ del losses[:]
 ```
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_0.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_0.png" />
 </p>
 
 
@@ -708,7 +707,7 @@ del losses[:]
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_2.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_2.png" />
 </p>
 
 
@@ -718,7 +717,7 @@ del losses[:]
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_4.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_4.png" />
 </p>
 
 
@@ -727,7 +726,7 @@ del losses[:]
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_6.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_6.png" />
 </p>
 
 
@@ -736,7 +735,7 @@ del losses[:]
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_8.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_8.png" />
 </p>
 
 
@@ -745,7 +744,7 @@ del losses[:]
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_10.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_10.png" />
 </p>
 
 
@@ -754,7 +753,7 @@ del losses[:]
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_12.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_12.png" />
 </p>
 
 
@@ -763,7 +762,7 @@ del losses[:]
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_14.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_14.png" />
 </p>
 
 ## Prediction
@@ -789,7 +788,7 @@ print('b = ', b)
     
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_16.png/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_16.png" />
 </p>
 ![png](output_58_16.png)
 
