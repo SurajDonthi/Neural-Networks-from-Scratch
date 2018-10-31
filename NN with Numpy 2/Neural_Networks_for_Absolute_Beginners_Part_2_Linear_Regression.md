@@ -167,7 +167,6 @@ def plot_graph(X, y):
 Let's check the shape of the vectors for consistency.
 
 
-
 ```python
 >>>print('Shape of vector X:', X.shape)
 >>>print('Shape of vector y:', y.shape)
