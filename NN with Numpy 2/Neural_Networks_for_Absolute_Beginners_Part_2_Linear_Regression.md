@@ -786,8 +786,6 @@ print('b = ', b)
 <p align="center">
 <img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_16.png" />
 </p>
-![png](output_58_16.png)
-
 
     Hence 
     m =  82.34083095217943
