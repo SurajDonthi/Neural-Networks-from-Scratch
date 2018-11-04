@@ -1,5 +1,5 @@
 
-# Implementing Neural Networks with Numpy for Absolute Beginners - Part 2: Linear Regression
+# Neural Networks with Numpy for Absolute Beginners - Part 2: Linear Regression
 
 ##### In this tutorial, you will learn to implement Linear Regression for prediction using Numpy in detail and also visualize how the algorithm learns epoch by epoch. In addition to this, you will explore two layer Neural Networks.
 
