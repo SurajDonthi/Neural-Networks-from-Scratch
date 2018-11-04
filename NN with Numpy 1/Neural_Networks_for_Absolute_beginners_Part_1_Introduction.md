@@ -1,5 +1,5 @@
 
-# Implementing Neural Networks with Numpy for Absolute Beginners - Part 1: Introduction
+# Neural Networks with Numpy for Absolute Beginners - Part 1: Introduction
 
 ##### In this tutorial, you will get a brief understanding of what Neural Networks are and how they have been developed. In the end, you will gain a brief intuition as to how the network learns.
 
