@@ -1,5 +1,5 @@
 
-# Implementing Neural Networks with Numpy for Absolute Beginners - Part 1: Introduction
+# Neural Networks with Numpy for Absolute Beginners - Part 1: Introduction
 
 ##### In this tutorial, you will get a brief understanding of what Neural Networks are and how they have been developed. In the end, you will gain a brief intuition as to how the network learns.
 
@@ -21,9 +21,9 @@ There are 3 situations that you can encounter in this domain:
 <br><br>
 Supervised Learning can be further divided into the two tasks as below:
 <br>
-> a. Classifcation - where you predict that the data belongs to a specific class. Eg.: Classfying a cat or a dog.</pre>
+a. Classifcation - where you predict that the data belongs to a specific class. Eg.: Classfying a cat or a dog.</pre>
 <br>
-> b. Regression - where a real number value is predicted. Eg: Predicting the price of a house given it's dimensions.</pre>
+b. Regression - where a real number value is predicted. Eg: Predicting the price of a house given it's dimensions.</pre>
 <br>
 
 >>In the below example, you can see that images are trained against their labels. You test the model by inputting an image and predicting it's class... like a cat.

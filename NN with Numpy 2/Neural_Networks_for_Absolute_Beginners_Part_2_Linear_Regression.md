@@ -1,18 +1,17 @@
 
-# Implementing Neural Networks with Numpy for Absolute Beginners - Part 2: Linear Regression
+# Neural Networks with Numpy for Absolute Beginners - Part 2: Linear Regression
 
 ##### In this tutorial, you will learn to implement Linear Regression for prediction using Numpy in detail and also visualize how the algorithm learns epoch by epoch. In addition to this, you will explore two layer Neural Networks.
 
-In the previous tutorial, you got a very brief overview of the field of AI and learnt 
-about perceptrons. 
-In this tutorial, you will dig very deep into implementing a Linear Perceptron and build upon 
-those concepts to understand Linear Regression.
+In the previous tutorial, you got a very brief overview of the field of AI and learnt about perceptrons. In this tutorial, you will dig deep into implementing a Linear Perceptron(Linear Regression) from which you'll be able to predict the outcome of a problem!
 
+This tutorial will apparently include a bit of math as it is inevitable but there's no need to worry as I have explained them ground up. Regardless of this, it must be realized that all machine learning algorithms are basically mathematical solutions which are finally implemented in the form of code.
 
+Before we start off, remember that I had mentioned about activation functions similar to the ones in our brain like a threshold function?! Well, researchers have designed many different activation functions for obtaining better results! So here you'll be introduced to linear activation function which is the most basic of them all and after that we can actually learn to predict using this activation function.
 
 ## Linear Activation Function
 
-Lets assume that there is only one input and bias to the perceptron as shown below:
+Let's assume that there is only one input and bias to the perceptron as shown below:
 
 <p align="center">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vQ0sj3f-bHdNDVltSyUEHQqccTNxA9zWCeskyI5pdpbyoWmYODkGc_J_T_8PYdhvUZ5jUJG-XhuU8-D/pub?w=2800&h=2168" alt="Drawing" width="600"/>
@@ -229,9 +228,13 @@ Let's check the shape of the Train and Test datasets created.
 
 As you can see, 80% of the data i.e., 80% of 200 data points is 160 which is correct.
 
-The next step is to randomly generate a line with a random slope and an intercept(bias). 
-The goal is to achieve the best fit for the line.
+So what have we achieved till now?
+We have done the intial <b>data preprocessing</b> and also <b>explored the data</b> through visualising it. 
+This is typically the first step while modelling any machine learning algorithm. We have also split the data for testing the accuracy of the model once it is trained.
 
+So what do we do next?
+Clearly as shown in the above GIF image, we need to consider a random line at first and then fit it on the data through training. 
+So the next step is to randomly <b>generate a line with a random slope and an intercept(bias)</b>. The goal is to achieve the best fit for the line.
 
 ```python
 # Function to generate parameters of the linear regression model, m & b.
@@ -317,9 +320,11 @@ Since the line is now generated, you'll need to predict the
 values it is producing for a given value 
 of <img src="http://latex.codecogs.com/gif.latex?x" title="x" />. 
 From this value, all there is to do is to calculate 
-their mean squared error.
+their mean squared error. Why?
 
-Let us predict the values of <img src="http://latex.codecogs.com/gif.latex?y(y_{pred})" title="y(y_{pred})" /> 
+How could we find the difference between the actual output and the predicted output? The simplest way would be to just subtract these two differences. We have a random line that gives an output for every <img src="http://latex.codecogs.com/gif.latex?x" title="x" /> that is given, but it's surely not the actual output. Luckily, we have the actual output of all <img src="http://latex.codecogs.com/gif.latex?x" title="x" /> too! So what we do is instead of taking the difference directly, we square it and take the mean for all the given points & this is called <b>*Mean \ Squared \ Error*</b>
+
+Let us now predict the values of <img src="http://latex.codecogs.com/gif.latex?y(y_{pred})" title="y(y_{pred})" /> 
 from the parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> & 
 <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> given the datapoints 
 <img src="http://latex.codecogs.com/gif.latex?X_{train}" title="X_{train}" /> 
@@ -341,14 +346,11 @@ def forward_prop(X, m, b):
 
 ## Cost/Loss Function
 
-Now, that you have both the corresding values for 
+As mentioned earlier, now that you have both the corresponding values for 
 <img src="http://latex.codecogs.com/gif.latex?X_{train}" title="X_{train}" /> 
 and the predicted values 
 for <img src="http://latex.codecogs.com/gif.latex?y(y_{pred})" title="y(y_{pred})" /> you'll 
 calculate the Cost/Error/Loss Function. We shall stick to the term Loss. 
-
-For the <img src="http://latex.codecogs.com/gif.latex?Loss" title="Loss" />, you must compute 
-the <img src="http://latex.codecogs.com/gif.latex?Mean&space;\&space;Squared&space;\&space;Error$" title="Mean \ Squared \ Error$" /> and minimize it.
 
 The <img src="http://latex.codecogs.com/gif.latex?Loss(Mean&space;\&space;Squared&space;\&space;Error)" title="Loss(Mean \ Squared \ Error)" /> is:
 
@@ -364,11 +366,11 @@ as below:
 <img src="http://latex.codecogs.com/gif.latex?L&space;=&space;\frac{1}{2M}\sum_{i=0}^M(y'^{(i)}&space;-&space;y^{(i)})^2" title="L = \frac{1}{2M}\sum_{i=0}^M(y'^{(i)} - y^{(i)})^2" />
 </p>
 
-Hence, our goal would be to minimize the $Loss$ thereby fitting the curve.
+Our goal is to obviously minimize the $Loss$ so the regression line predicts more accurately.
 
 Let us now codify this.
 
-We shall also save each value of $loss$ that will be computed.
+We shall also save each value of $loss$ that will be computed to graphically visualize how it changes during training.
 
 
 ```python
@@ -454,7 +456,7 @@ def plot_pred_line(X, y, m, b,losses=None):
     return 
 ```
 
-You'll shall visualize the line created from the parameters 
+You'll visualize the line created from the parameters 
 <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
 and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />.
 
@@ -502,7 +504,7 @@ It is clear from the graph, that as
 <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
 moves towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />, 
 the Cost decreases and as it 
-moves away from it, the cost increase.
+moves away from it, the cost increases.
 
 <b>Now, how can we make <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
 move towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />
@@ -584,9 +586,9 @@ Therefore, the bel curve would be *3-dimensional* as shown in the below figure.
 <img src="https://media.giphy.com/media/O9rcZVmRcEGqI/giphy.gif" alt="Drawing" width="700"/>
 </p>
 
-We compute the partial derivative of the loss function w.r.t to the 
+As mentioned, you'll compute the partial derivative of the loss function w.r.t to the 
 parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> & 
-<img src="http://latex.codecogs.com/gif.latex?b" title="b" /> to obtain i.e.,
+<img src="http://latex.codecogs.com/gif.latex?b" title="b" />. [<b>Note:</b> It is usually expected that you know the basic concepts of partial derivatives. However if you do not, you can refer this wondeful [Khan Academy video](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivatives/v/partial-derivatives-introduction)]
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;L}{\partial&space;m}&space;=&space;\partial{m}&space;=&space;\frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)}&space;-&space;y^{(i)}\Big).x^{(i)}\qquad--(1)" title="\frac{\partial L}{\partial m} = \partial{m} = \frac{1}{M}.\sum_{i=0}^M\Big(y'^{(i)} - y^{(i)}\Big).x^{(i)}\qquad--(1)" />
@@ -608,6 +610,8 @@ def grad_desc(m, b, X_train, y_train, y_pred):
 
 ### Updating the parameters
 
+Now we subtract the slope of the parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> from their respective derivatives along with the dampening factor <img src="http://latex.codecogs.com/gif.latex?\alpha" title="\alpha" />$\alpha$(alpha)
+
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?m&space;=&space;m&space;-&space;\alpha&space;.&space;\partial{m}&space;\qquad\qquad\qquad\&space;--(3)\\" title="m = m - \alpha . \partial{m} \qquad\qquad\qquad--(3)\\" />
 </p>
@@ -626,6 +630,7 @@ def update_params(m, b, dm, db, l_r):
     return m, b
 ```
 
+From decreasing the values of  <img src="http://latex.codecogs.com/gif.latex?m" title="m" />  and  <img src="http://latex.codecogs.com/gif.latex?b" title="b" />, they are incrementally moving towards the minima. So updating the parameters this way has to be done for many iterations, which is called  <img src="http://latex.codecogs.com/gif.latex?epoch" title="epoch" />.
 
 Let us define a function ```back_prop```, which calls both ```grad_desc``` 
 and ```update_params```.
@@ -641,9 +646,7 @@ def back_prop(X_train, y_train, y_pred, m, b, l_r):
     return m, b
 ```
 
-We shall now combine and call all the functions at once to see how the algorithm works.
-
-We shall again set and tune the parameters to improve the accuracy of our linear regression model.
+We have now defined everything that we need, so let's compile all the functions into one and see how our algorithm works. So before you can actually run the code, you'll have to set the hyperparameters.
 
 
 ```python
@@ -761,8 +764,16 @@ del losses[:]
 <img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_14.png" />
 </p>
 
+Since you have trained the paramters for 60 epochs and the regression line looks to be fitting the data, you can move forward to the last phase, i.e., prediction on our test data and checking the accuracy.
+
 ## Prediction
 
+For checking the accuracy, you can take the mean of percentage error for all the test data points.
+
+<p align="center">
+<img src="http://latex.codecogs.com/gif.latex?Accuracy=&space;\frac{y_{pred}&space;-&space;y_{test}}{y_test}&space;\times&space;100" title="Accuracy= \frac{y_{pred} - y_{test}}{y_test} \times 100" />
+</p>          
+          
 
 ```python
 # Prediction
@@ -786,18 +797,18 @@ print('b = ', b)
 <p align="center">
 <img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_58_16.png" />
 </p>
-![png](output_58_16.png)
-
 
     Hence 
     m =  82.34083095217943
     b =  0.46491578390750576
     
+The accuracy is 80% which is ok considering the variance in the data as is seen in the above graphs.
 
+I was hoping to introduce something really interesting in the article and as a bonus I have also added an intro to Neural Networks. But this surely comes with a catch!
 
 ## Two Layer Neural Neutwork with Linear Activation Function
 
-Now, let us consider scaling this up to a 2 layer network as shown in the below figure.
+The Neural Network is shown below.
 <p align="center">
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vQGsJESLwUjPIqrxaK4tZBsOBNuSQbzl0RKd0vL3nV8-QEf8rbP6ZqbKTszCUxdgvzcCSgl6WTQikSu/pub?w=3649&h=2880" alt="two layer network with Linear Activation Function." width="600"/>
 </p>
@@ -805,7 +816,7 @@ Now, let us consider scaling this up to a 2 layer network as shown in the below 
 From the image, we observe that there are two inputs each to the 
 two neurons in the first layer and an output neuron in the second layer.
 
-We can represent them in vector form as:
+We will be using matrices for representing our above equations. We can represent them in vector (single column matrix) form as:
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?z_1^{[1]}&space;=&space;x.w_1^{[1]}&space;\\&space;\\&space;=&space;\begin{bmatrix}&space;x_0&space;&&space;x_1&space;&&space;x_2&space;\end{bmatrix}&space;.&space;\begin{bmatrix}&space;w_{10}^{[1]}&space;\\&space;w_{11}^{[1]}&space;\\&space;w_{12}^{[1]}&space;\end{bmatrix}\\&space;\\&space;\\&space;=&space;w_{10}^{[1]}&space;&plus;&space;w_{11}^{[1]}.x_1&space;&plus;&space;w_{12}^{[1]}.x_2,&space;\\" title="z_1^{[1]} = x.w_1^{[1]} \\ \\ = \begin{bmatrix} x_0 & x_1 & x_2 \end{bmatrix} . \begin{bmatrix} w_{10}^{[1]} \\ w_{11}^{[1]} \\ w_{12}^{[1]} \end{bmatrix}\\ \\ \\ = w_{10}^{[1]} + w_{11}^{[1]}.x_1 + w_{12}^{[1]}.x_2, \\" />
 
@@ -839,17 +850,17 @@ layer will be:
 
 From the above set of equations, we see that a neural network 
 with a linear activation function reduces to a *linear equation*. 
-This defeats the purpose of the whole neural network which tries 
-to approximate to complex curves in space, so as to find the 
-optimal solution. <b>Hence, it should be strictly noted that a 
+
+The whole purpose of neural networks was to create a very complex function that can fit to any sort of data and as it can be clearly seen, a neural network with linear activation functions fails the purpose. <b>Hence, it should be strictly noted that a 
 linear function cannot be used as an activation function for 
 the neural network,</b> *although it can be used only in the 
 last layer for regression problems*.
 
+Then I guess you'll have to hold your horses until the next tutorial to implement one!
 ### Conclusion
 
 In this tutorial, you learnt
-1. The concept of  perceptron and also neural networks.
+1. The concept of  perceptron and also got a small introduction to neural networks.
 
 2. Linear Activation functions perform the tasks of regression i.e., 
 learn to predict and forecast values. This method is extensively 
@@ -861,4 +872,4 @@ linear activations must not be used in the hidden layers of a network.
 However, it can be used in the last layer for regression/prediction tasks.
 
 In the next tutorial, you'll learn about Sigmoid Activation Function 
-and perform Logistic Regression.
+and perform Logistic Regression which is the most important key to implement neural networks.
