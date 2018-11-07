@@ -219,7 +219,7 @@ By intuition, you can easily observe that <img src="http://latex.codecogs.com/gi
 
 This is a very important concept that you will be digging deeper and will  be the core to formulate the ideas behind *gradient descent* and also *backward propagation*.
 
-## What did we learn?
+## What did you learn?
 
 - Neurons must be made sensitive to a pattern in order to recognize it.
 - So similarly, in our perceptron/artificial neuron, <b>the weights are what is to be learnt</b>.
