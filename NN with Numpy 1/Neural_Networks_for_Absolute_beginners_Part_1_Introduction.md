@@ -51,7 +51,7 @@ It has been shown through Neuroplasticity that the different regions of the brai
 
 >>>>>>>>>>[![](https://img.youtube.com/vi/xzbHtIrb14s/0.jpg)](https://www.youtube.com/watch?v=xzbHtIrb14s)
 
-But what is mechanism by which the neurons become sensitve?
+But what is the mechanism by which the neurons become sensitve?
 
 Unfortunately, neuroscientists are still trying to figure that out!!
 
@@ -219,8 +219,17 @@ By intuition, you can easily observe that <img src="http://latex.codecogs.com/gi
 
 This is a very important concept that you will be digging deeper and will  be the core to formulate the ideas behind *gradient descent* and also *backward propagation*.
 
-## Conclusion
+## What did we learn?
 
-While it is true that we learnt only a few small concepts (although very crucial) in this first part of the article,  they will serve as the strong foundation for implementing Neural Networks. Moreover, I'm keeping this article short and sweet so that too much is information is not dumped at once and will help aborb more!
+- Neurons must be made sensitive to a pattern in order to recognize it.
+- So similarly, in our perceptron/artificial neuron, <b>the weights are what is to be learnt</b>.
+
+In the later articles you'll fully understand how the weights are trained to recognize patterns and also the different techniques that exist.
+
+As you'll see later, the neural networks are very similar to the structure of biological neural networks.
+
+While it is true that we learnt only a few small concepts (although very crucial) in this first part of the article,  they will serve as the strong foundation for implementing Neural Networks. Moreover, I'm keeping this article short and sweet so that too much is information is not dumped at once and will help absorb more!
+
+In the next tutorial, you will learn about <b>Linear Regression</b> (which can otherwise be called a perceptron with linear activation function) in detail and also implement them. The <b>Gradient Descent algorithm which helps learn the weights</b> are described and implemented in detail. Lastly, you'll be able to <b>predict the outcome of an event</b> with the help of Linear Regression. So head on to the next article to implement it!
 
 You can checkout the next part of the article here: 
