@@ -42,7 +42,7 @@ Well, through millions of years of evolution, the neurons have become sensitive 
 Most of us also know that different regions of our brain are activated (/receptive) for different actions like seeing, hearing, creative thinking and so on. This is because the neurons belonging to a specific region in the brain are trained to process a certain kind of information better and hence get activated only when certain kinds of information is being sent.The figure below gives us a better understanding of the different receptive regions of the brain.
 
 <p align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Blausen_0102_Brain_Motor%26Sensory_%28flipped%29.png" width="50%">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%201/Images/Blausen_0102_Brain_Motor%26Sensory_(flipped).png" width="50%">
 </p>
 
 If that is so... can the neurons be made sensitive to a different pattern(i.e., if they have truly become sensitive based on some patterns)?
