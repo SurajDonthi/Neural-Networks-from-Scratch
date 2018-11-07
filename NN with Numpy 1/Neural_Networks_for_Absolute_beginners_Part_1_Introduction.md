@@ -211,6 +211,6 @@ This is a very important concept that you will be digging deeper and will  be th
 
 ## Conclusion
 
-While it is true that we learnt only a few small concepts (although very crucial) in this first part of the article,  they will serve as the strong foundation for implementing Neural Networks. Moreover, keeping the article short and sweet will keep you enthused and wanting more.
+While it is true that we learnt only a few small concepts (although very crucial) in this first part of the article,  they will serve as the strong foundation for implementing Neural Networks. Moreover, I'm keeping this article short and sweet so that too much is information is not dumped at once and will help aborb more!
 
 You can checkout the next part of the article here: 
