@@ -3,29 +3,23 @@
 
 ##### In this tutorial, you will get a brief understanding of what Neural Networks are and how they have been developed. In the end, you will gain a brief intuition as to how the network learns.
 
-Artificial Intelligence has become one of the hottest fields in the current day and most of us willing to dive into this field start off with Neural Networks. But on confronting the math intensive concepts of Neural Networks we just end up learning a few frameworks like Tensorflow, Pytorch etc. for implementing Deep Learning Models. Moreover, just learning these frameworks and not understanding the underlying concepts is like playing with a black box. Whether you want to work in the industry or academia, you wil be working and tweaking these for which you need to have a clear understanding. Both the industry and the academia expect you to have full clarity of these concepts. In this tutrial, I'll make it extremely simple to understand Neural Networks by providing step by step explanation. Also, the math you'll need will be the level of high school.
+Artificial Intelligence has become one of the hottest fields in the current day and most of us willing to dive into this field start off with Neural Networks!! 
+
+But on confronting the math intensive concepts of Neural Networks we just end up learning a few frameworks like Tensorflow, Pytorch etc., for implementing Deep Learning Models. 
+
+Moreover, just learning these frameworks and not understanding the underlying concepts is like playing with a black box. 
+
+Whether you want to work in the industry or academia, you will be working, tweaking and playing with the models for which you need to have a clear understanding. Both the industry and the academia expect you to have full clarity of these concepts including the math.
+
+In this series of tutrials, I'll make it extremely simple to understand Neural Networks by providing step by step explanation. Also, the math you'll need will be the level of high school.
 
 Let us start with the nemesis of artificial neural networks and gain some inspiration as to how it evolved.
 
 ## A little bit into the history of how Neural Networks evolved
 
-The evolution of AI dates to back to 1950 when Alan Turing, the computer genius, came out with the Turing Test to distinguish between a Human and a Robot. He describes that when a machine performs so well, that we humans are not able to distinguish between the response given by a human and a machine, it has passed the Turing Test. Apparently this feat was achieved only in 2012, when a company named Vicarious cracked the captchas. Check out this video below on how Vicarious broke the captchas.
+It must be noted that most of the Algorithms for Neural Networks that were developed during the period 1950-2000 and now existing, are highly inspired by the working of our brain, the neurons, their structure and how they learn and transfer data. The most popular works include the Perceptron(1958) and the Neocognitron(1980). These papers were extremely instrumental in unwiring the brain code. They try to mathematically formulate a model of the neural networks in our brain. 
 
->>>>>>>>>>[![](https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%201/Images/Vicarious.png)](https://www.youtube.com/watch?v=-H185jPf-7o)
-
-It must be noted that most of the Algorithms that were developed during that period(1950-2000) and now existing, are highly inspired by the working of our brain, the neurons and their structure with how they learn and transfer data. The most popular works include the Perceptron and the Neocognitron - (not covered in this article, but in a future article) based on which the Neural Networks have been developed. 
-
-Now, before you dive into what a perceptron is,  let's make sure you know a bit of all these... Although not necessarily required!
-
-## Prerequisites
-
-What you’ll need to know for the course:
-1.   A little bit of Python &
-2.   The eagerness to learn Neural Networks.
-
-If you are unsure of which environment to use for implementing this, I recommend [Google Colab](https://colab.research.google.com/). The environment comes with many important packages already installed. Installing new packages and also importing and exporting the data is quite simple. Most of all, it also comes with GPU support. So go ahead and get coding with the platform!
-
-Lastly, this article is directed for those who want to learn about Neural Networks or just Linear Regression. However, there would be an inclination towards Neural Networks!
+And everything changed after the God Father of AI Geoffrey Hinton formulated the back propagation algorithm in 1986(That's right! what you are learnig is more than 30 years old!).
 
 ## A biological Neuron
 
@@ -33,23 +27,37 @@ Lastly, this article is directed for those who want to learn about Neural Networ
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSivgdRoiDD8I1uBa1pUk9uALPbsE4LyoSVJpJkxLbT3DqTN-UwAcn4La9jmADG2u-8Ul5dZmDpwVtw/pub?w=3842&h=1698" width=800>
 </p>
 
-The figure above shows a biological neuron. It has *dendrites* that recieve information from neurons. The recieved information is passed on to the *cell body or the nucleus* of the neuron. The *nucleus* is where the information is processed. The processed information is passed on to the next layer of neurons through the *axons*.
+The figure above shows a biological neuron. It has *dendrites* that recieve information from neurons. The recieved information is passed on to the *cell body or the nucleus* of the neuron. The *nucleus* is where the information is processed and passed on to the next layer of neurons through *axons*.
 
-Our brain consists of about 100 billion such neurons which communicate through electrochemical signals. Each neuron is connected to 100s and 1000s of other neurons which constantly transmit and recieve signals. When the sum of the signals recieved by a neuron exceeds a set threshold value, the cell is activated (although, it has been speculated that neurons use very complex activations to process the input data) and the signal is further transmitted to other neurons. You'll see that the artificial neuron or the perceptron adopts the same ideology to perform computation and transmit data in the next section.
+Our brain consists of about 100 billion such neurons which communicate through electrochemical signals. Each neuron is connected to 100s and 1000s of other neurons which constantly transmit and recieve signals. 
 
-You know that different regions of our brain are activated (/receptive) for different actions like seeing, hearing, creative thinking and so on. This is because the neurons belonging to a specific region in the brain are trained to process a certain kind of information better and hence get activated when only certain kinds of information is being sent.The figure below gives us a better understanding of the different receptive regions of the brain.
+But how can our brain precess so much information just by sending electrochemical signals? How can the neurons understand which signal is important and which isn't? How do the neurons know what information to pass forward?
+
+The electrochemical signals consist of strong and weak signals. The strong signals are the ones to dominate which information is important. So only the strong signal or a combination of them pass through the neclues(the CPU of neurons) and are transmitted to the next set of neurons through the axons.
+
+But how are some signals strong and some signals week?
+
+Well, through millions of years of evolution, the neurons have become sensitive to certain kinds of signals. When the neuron encounters a specific pattern, they get triggered(activated) and as a consequence send strong signals to other neurons and hence the information is transmitted.
+
+Most of us also know that different regions of our brain are activated (/receptive) for different actions like seeing, hearing, creative thinking and so on. This is because the neurons belonging to a specific region in the brain are trained to process a certain kind of information better and hence get activated only when certain kinds of information is being sent.The figure below gives us a better understanding of the different receptive regions of the brain.
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%201/Images/brain-regions-areas.gif" width=600>
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Blausen_0102_Brain_Motor%26Sensory_%28flipped%29.png" width="50%">
 </p>
 
-It has also been shown through the concept of Neuroplasticity that the different regions of the brain can be rewired to perform totally different tasks. Such as the neurons responsible for touch sensing can be rewired to become sensitive to smell. Check out this great TEDx video below to know more about neuroplasticity.
+If that is so... can the neurons be made sensitive to a different pattern(i.e., if they have truly become sensitive based on some patterns)?
 
-Similarly, an artificial neuron/perceptron can be trained to recognize some of the most comlplex pattern. Hence, they can be called Universal Function Approximators.
-
-In the next section, we'll explore the working of a perceptron and also gain a mathematical intuition.
+It has been shown through Neuroplasticity that the different regions of the brain can be rewired to perform totally different tasks. Such as the neurons responsible for touch sensing can be rewired to become sensitive to smell. Check out this great TEDx video below to know more about neuroplasticity.
 
 >>>>>>>>>>[![](https://img.youtube.com/vi/xzbHtIrb14s/0.jpg)](https://www.youtube.com/watch?v=xzbHtIrb14s)
+
+But what is mechanism by which the neurons become sensitve?
+
+Unfortunately, neuroscientists are still trying to figure that out!!
+
+But fortunately enough, god father Geff has saved the day by inventing back propagation which accomplishes the same task for our Artificial Neurons, ie., sensitizing them to certain patterns.
+
+In the next section, we'll explore the working of a perceptron and also gain a mathematical intuition.
 
 ## Perceptron/Artificial Neuron
 
@@ -59,7 +67,9 @@ In the next section, we'll explore the working of a perceptron and also gain a m
 
 From the figure, you can observe that the perceptron is a reflection of the biological neuron. The inputs combined with the weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) are analogous to dendrties. These values are summed and passed through an activation function (like the thresholding function as shown in fig.). This is analogous to the nucleus. Finally, the activated value is transmitted to the next neuron/perceptron which is analogous to the axons.
 
-The latent weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) multiplied with each input(<img src="http://latex.codecogs.com/gif.latex?x_i" title="x_i" />) depicts the significance of the respective input/feature. Larger the value of a weight, more important is the feature. Hence, the weights are what is learned in a perceptron so as to arrive at the required result. An additional bias(<img src="http://latex.codecogs.com/gif.latex?b" title="b" />, here <img src="http://latex.codecogs.com/gif.latex?w_i" title="w_0" />) is also learned.
+The latent weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) multiplied with each input(<img src="http://latex.codecogs.com/gif.latex?x_i" title="x_i" />) depicts the significance(strength) of the respective input signal. Hence, larger the value of a weight, more important is the feature.
+
+You can infer from this architecture that the weights are what is learned in a perceptron so as to arrive at the required result. An additional bias(<img src="http://latex.codecogs.com/gif.latex?b" title="b" />, here <img src="http://latex.codecogs.com/gif.latex?w_0" title="w_0" />) is also learned.
 
 Hence, when there are multiple inputs (say <img src="http://latex.codecogs.com/gif.latex?n" title="n" />), the equation can be generalized as follows: 
 
