@@ -3,51 +3,9 @@
 
 ##### In this tutorial, you will get a brief understanding of what Neural Networks are and how they have been developed. In the end, you will gain a brief intuition as to how the network learns.
 
-The field of Artificial Intelligence has gained a lot of popularity and momentum during the past 10 years, largely due to a huge increase in the computational capacity of computers with the use of GPUs and the availability of gigantic amounts of data. Deep Learning has become the buzzword everywhere!!
+Artificial Intelligence has become one of the hottest fields in the current day and most of us willing to dive into this field start off with Neural Networks. But on confronting the math intensive concepts of Neural Networks we just end up learning a few frameworks like Tensorflow, Pytorch etc. for implementing Deep Learning Models. Moreover, just learning these frameworks and not understanding the underlying concepts is like playing with a black box. Whether you want to work in the industry or academia, you wil be working and tweaking these for which you need to have a clear understanding. Both the industry and the academia expect you to have full clarity of these concepts. In this tutrial, I'll make it extremely simple to understand Neural Networks by providing step by step explanation. Also, the math you'll need will be the level of high school.
 
-<p align="center">
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vTl2YJMlcpOu3jsCAlBQATCKYEQUvxh2wMdXwtUgiBchFXM2sq-xf2GPFg2qERNZVArIxpC3sA2bwxI/pub?w=3118&h=2550" alt="Add figure" width="550"/>
-</p>
-
-Although Artificial Intelligence (AI) resonates with the notion of the machines to think and behave impersonating humans, it is rather restricted to very nascent and small task-specific functions while the term Artificial General Intelligence (AGI) obliges to the terms of impersonating a human. Above these is the concept of Artificial Super Intelligence (ASI) which gives me the shrills as it represents intelligence of machines far exceeding human levels!!
-
-The main concept for Artificial Intelligence currently holds that you have to train it before it learns to perform the task much like humans, except that here… you have to train it even for the simplest of the tasks like seeing and identifying objects!(This is surely a complex problem for our computers).
-
-There are 3 situations that you can encounter in this domain:
-1. When you have a lot of data...
-
-<li> Either your data is tagged, labelled, maintained or it is not.
- If the data is available and is fully labelled or tagged, you can train the model based on the given set of input-output pairs and ask the model to predict the output for a new set of data. This type of learning is called <b>Supervised Learning</b> (Since, you are giving the input and also mentioning that this is the correct output for the data).
-<br><br>
-Supervised Learning can be further divided into the two tasks as below:
-<br>
-a. Classifcation - where you predict that the data belongs to a specific class. Eg.: Classfying a cat or a dog.</pre>
-<br>
-b. Regression - where a real number value is predicted. Eg: Predicting the price of a house given it's dimensions.</pre>
-<br>
-
->>In the below example, you can see that images are trained against their labels. You test the model by inputting an image and predicting it's class... like a cat.
-<p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%201/Images/Cats%20and%20Dogs%20CNN.gif" alt="Add figure" width="550"/>
-</p>
-
-<li> When your data is unlabelled, the only option would be to let your model figure out by itself the patterns in the data. This is called <b>Unsupervised Learning</b>. 
-
->>In the example shown below, you only provide the datapoints and the number of clusters(classes) that has to be formed and let the algorithm find out the best set of clusters.
-<p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%201/Images/kmeans.gif" alt="Add figure" width="350"/>
-</p>
-
-2\. When you don't have data but instead have the environment itself to learn!
-
-Here, a learning agent is put in a predefined environment and made to learn by the actions it takes. It is either rewarded or punished based on its actions. This is the most interesting kind of learning and is also where a lot of exploration and research is happenning.It is called **Reinforcement Learning**.
-
->>As it can clearly be seen from the below image that the agent which is modelled as a person, learns to climb the wall through trial and error.
-<p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%201/Images/RL%20Jumping.gif" alt="Add figure" width="400"/>
-</p>
-
-<br><br>This tutorial focuses on Neural Networks which is a part of Supervised Learning.
+Let us start with the nemesis of artificial neural networks and gain some inspiration as to how it evolved.
 
 ## A little bit into the history of how Neural Networks evolved
 
@@ -253,4 +211,6 @@ This is a very important concept that you will be digging deeper and will  be th
 
 ## Conclusion
 
-In this tutorial you were introduced to the field of AI and went through an overview of perceptron. In the next tutorial, you'll learn to train a perceptron and do some predictions!!
+While it is true that we learnt only a few small concepts (although very crucial) in this first part of the article,  they will serve as the strong foundation for implementing Neural Networks. Moreover, keeping the article short and sweet will keep you enthused and wanting more.
+
+You can checkout the next part of the article here: 
