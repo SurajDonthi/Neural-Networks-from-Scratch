@@ -3,11 +3,15 @@
 
 ##### In this tutorial, you will learn to implement Linear Regression for prediction using Numpy in detail and also visualize how the algorithm learns epoch by epoch. In addition to this, you will explore two layer Neural Networks.
 
-In the previous tutorial, you got a very brief overview of the field of AI and learnt about perceptrons. In this tutorial, you will dig deep into implementing a Linear Perceptron(Linear Regression) from which you'll be able to predict the outcome of a problem!
+In the previous tutorial, you got a very brief overview of perceptrons. In this tutorial, you will dig deep into implementing a Linear Perceptron(Linear Regression) from which you'll be able to predict the outcome of a problem!
 
-This tutorial will apparently include a bit of math as it is inevitable but there's no need to worry as I have explained them ground up. Regardless of this, it must be realized that all machine learning algorithms are basically mathematical solutions which are finally implemented in the form of code.
+This tutorial will apparently include a bit more of math as it is inevitable, but there's no need to worry as I will explain them ground up. Regardless of this, it must be realized that all machine learning algorithms are basically mathematical formulations which are finally implemented in the form of code.
 
-Before we start off, remember that I had mentioned about activation functions similar to the ones in our brain like a threshold function?! Well, researchers have designed many different activation functions for obtaining better results! So here you'll be introduced to linear activation function which is the most basic of them all and after that we can actually learn to predict using this activation function.
+Before we start off, remember that we had used the threshold activation function to mimic the function of AND and NOR Gates?!
+
+Here we will use another extremely simple activation function called linear activation function (equivalent to not having any activation!).
+
+Let us find out the wonders that this activation function can do!
 
 ## Linear Activation Function
 
