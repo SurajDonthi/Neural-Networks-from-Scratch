@@ -208,7 +208,7 @@ regression model using a part of the dataset once you have trained the model.
 
 Now let's split the data into train set and test set. You shall 
 also reset the sizes so there is no 
-discrepency in doing matrix computations.
+discrepancy in doing matrix computations.
 
 
 ```python
