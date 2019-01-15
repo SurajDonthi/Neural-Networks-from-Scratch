@@ -19,14 +19,17 @@ Lastly, I recommend that you go through the first two tutorials before you start
 
 One of the earliest and most popular activation functions utilized is the *Sigmoid* function.
 
-The equation of the sigmoid function is as follows: \begin{equation} f(t) = \frac{1}{1 + e^{-t}} \end{equation} 
+The equation of the sigmoid function is as follows: 
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=f(t)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-t}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(t)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-t}}" title="f(t) = \frac{1}{1 + e^{-t}}" /></a>
 
 <br>and the graph for the function is as below:
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/sigmoid.png" alt="Sigmoid Function" width="500"/>
 
-When $t > 0.5$ the function approximates to $1$ and when $t<0$ the function approximates to $0$. Hence through a Sigmoid, we achieve binary classification i.e., either 1 or 0.
+When <a href="https://www.codecogs.com/eqnedit.php?latex=t&space;>&space;0.5" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t&space;>&space;0.5" title="t > 0.5" /></a> the function approximates to 1 and when <a href="https://www.codecogs.com/eqnedit.php?latex=t<0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t<0" title="t<0" /></a> the function approximates to 0. Hence through a Sigmoid, we achieve binary classification i.e., either 1 or 0.
 
 Hence, a perceptron with a sigmoid activation function does binary classification on a given set of data. This process of binary classification is popularly called ***Logistic Regression*** . In the next section, we'll dive deeper into *logistic regression* and also understand how the model is trained.
 
@@ -56,9 +59,9 @@ The computation graph for logistic regression to be implemented can be shown as 
 <p align="center">
 <img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/Logistic%20Regression%20Computation%20Graph.png" alt="Perceptron with Logistic Regression" width=50%/>
 
-We have two inputs $x_1$ and $x_2$ which are multiplied by the weights $w_1$ and $w_2$ respectively. An additional bias $b$ is added to their sum to obtain $z$. The parameters ($w_1$, $w_2$, $b$) are learnt during gradient descent.
+We have two inputs <a href="https://www.codecogs.com/eqnedit.php?latex=x_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_1" title="x_1" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=x_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_2" title="x_2" /></a> which are multiplied by the weights <a href="https://www.codecogs.com/eqnedit.php?latex=w_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_1" title="w_1" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=w_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_2" title="w_2" /></a> respectively. An additional bias <a href="https://www.codecogs.com/eqnedit.php?latex=b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b" title="b" /></a> is added to their sum to obtain <a href="https://www.codecogs.com/eqnedit.php?latex=z" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z" title="z" /></a>. The parameters (<a href="https://www.codecogs.com/eqnedit.php?latex=w_1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_1" title="w_1" /></a>, <a href="https://www.codecogs.com/eqnedit.php?latex=w_2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w_2" title="w_2" /></a>, <a href="https://www.codecogs.com/eqnedit.php?latex=b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b" title="b" /></a>) are learnt during gradient descent.
 
-The sum $z$ is passed through the sigmoid activation function to obtain the prediction $y$. The activation function has already been explained earlier.
+The sum <a href="https://www.codecogs.com/eqnedit.php?latex=z" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z" title="z" /></a> is passed through the sigmoid activation function to obtain the prediction <a href="https://www.codecogs.com/eqnedit.php?latex=y" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y" title="y" /></a>. The activation function has already been explained earlier.
 
 Now let's get coding!
 
@@ -239,7 +242,7 @@ def forward_prop(X, W, b):
 y_pred = forward_prop(X_train, W, b)
 ```
 
-Now, given $w$ & $b$, we can plot a contour region over the set of generated train set. A contour region represents the different areas separated by the decision boundary.
+Now, given <a href="https://www.codecogs.com/eqnedit.php?latex=W" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W" title="W" /></a> & <a href="https://www.codecogs.com/eqnedit.php?latex=b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b" title="b" /></a>, we can plot a contour region over the set of generated train set. A contour region represents the different areas separated by the decision boundary.
 
 
 ```python
@@ -314,7 +317,7 @@ It's now time to define the loss function!!
 
 ## Cost/Loss Function
 
-Unlike the MSE for Linear Regression, here we use a logistic loss function. This is because when we pass the sum $z$ through a sigmoid activation function, the output is non-linear (as sigmoid function is non-linear). This results in an error that is non-convex.
+Unlike the MSE for Linear Regression, here we use a logistic loss function. This is because when we pass the sum <a href="https://www.codecogs.com/eqnedit.php?latex=z" target="_blank"><img src="https://latex.codecogs.com/gif.latex?z" title="z" /></a> through a sigmoid activation function, the output is non-linear (as sigmoid function is non-linear). This results in an error that is non-convex.
 
 But what do we mean by non-convex?
 
@@ -329,35 +332,29 @@ Hence, we use a log function that actually converts the non-linear function back
 
 
 The Loss can be defined as:
-\begin{equation}
-l = 
-\begin{cases}
--\log(y'),& \text{if } y = 1\\
--\log(1-y'),& \text{if } y = 0\\
-\end{cases}
-\end{equation}
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=l&space;=&space;\begin{cases}&space;-\log(y'),&&space;\text{if&space;}&space;y&space;=&space;1\\&space;-\log(1-y'),&&space;\text{if&space;}&space;y&space;=&space;0\\&space;\end{cases}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?l&space;=&space;\begin{cases}&space;-\log(y'),&&space;\text{if&space;}&space;y&space;=&space;1\\&space;-\log(1-y'),&&space;\text{if&space;}&space;y&space;=&space;0\\&space;\end{cases}" title="l = \begin{cases} -\log(y'),& \text{if } y = 1\\ -\log(1-y'),& \text{if } y = 0\\ \end{cases}" /></a>
 
  <p align="center">
 <img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/Negative%20Log%20Function.png" width="500" alt="Negative Log Function"/>
 
-The graph of $-\log (x)$ is shown in the above figure. 
-You can infer that given $y = 1$ if $y' \rightarrow 1$, then $loss \rightarrow 0$ and when $y' \rightarrow 0$, then $loss \rightarrow \infty$.
-Similarly, if $y' \rightarrow 0$, then $loss \rightarrow 0$ and when $y' \rightarrow 1$, then $loss \rightarrow \infty$ given $y = 0$.
+The graph of <a href="https://www.codecogs.com/eqnedit.php?latex=-\log&space;(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?-\log&space;(x)" title="-\log (x)" /></a> is shown in the above figure. 
+You can infer that given <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;1" title="y = 1" /></a> if <a href="https://www.codecogs.com/eqnedit.php?latex=y'&space;\rightarrow&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y'&space;\rightarrow&space;1" title="y' \rightarrow 1" /></a>, then <a href="https://www.codecogs.com/eqnedit.php?latex=loss&space;\rightarrow&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?loss&space;\rightarrow&space;0" title="loss \rightarrow 0" /></a> and when <a href="https://www.codecogs.com/eqnedit.php?latex=y'&space;\rightarrow&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y'&space;\rightarrow&space;0" title="y' \rightarrow 0" /></a>, then <a href="https://www.codecogs.com/eqnedit.php?latex=loss&space;\rightarrow&space;\infty" target="_blank"><img src="https://latex.codecogs.com/gif.latex?loss&space;\rightarrow&space;\infty" title="loss \rightarrow \infty" /></a>.
+Similarly, if <a href="https://www.codecogs.com/eqnedit.php?latex=y'&space;\rightarrow&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y'&space;\rightarrow&space;0" title="y' \rightarrow 0" /></a>, then <a href="https://www.codecogs.com/eqnedit.php?latex=loss&space;\rightarrow&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?loss&space;\rightarrow&space;0" title="loss \rightarrow 0" /></a> and when <a href="https://www.codecogs.com/eqnedit.php?latex=y'&space;\rightarrow&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y'&space;\rightarrow&space;1" title="y' \rightarrow 1" /></a>, then <a href="https://www.codecogs.com/eqnedit.php?latex=loss&space;\rightarrow&space;\infty" target="_blank"><img src="https://latex.codecogs.com/gif.latex?loss&space;\rightarrow&space;\infty" title="loss \rightarrow \infty" /></a> given <a href="https://www.codecogs.com/eqnedit.php?latex=y&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y&space;=&space;0" title="y = 0" /></a>.
 It implies that when the prediction is wrong, the parameters are heavily penalized and when the prediction is right, the parameters are not penalized.
 
-For the purpose of computation, you'll have to define a single function that can perform both cases when $y=1$ and  $y=0$. Therefore, we can reduce the function as below:
+For the purpose of computation, you'll have to define a single function that can perform both cases when <a href="https://www.codecogs.com/eqnedit.php?latex=y=1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=1" title="y = 1" /></a> and  <a href="https://www.codecogs.com/eqnedit.php?latex=y=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=0" title="y=0" /></a>. Therefore, we can reduce the function as below:
 
-\begin{equation}
-L = -\Big[y.\log(y') + (1-y).\log(1-y')\Big]
-\end{equation}
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=L&space;=&space;-\Big[y.\log(y')&space;&plus;&space;(1-y).\log(1-y')\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;=&space;-\Big[y.\log(y')&space;&plus;&space;(1-y).\log(1-y')\Big]" title="L = -\Big[y.\log(y') + (1-y).\log(1-y')\Big]" /></a>
 
-Here, the function reduces to $\log(y')$ when $y=1$ and $\log(1-y')$ when $y=0$ just as we had defined earlier.
+Here, the function reduces to <a href="https://www.codecogs.com/eqnedit.php?latex=\log(y')" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\log(y')" title="\log(y')" /></a> when <a href="https://www.codecogs.com/eqnedit.php?latex=y=1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=1" title="y=1" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=\log(1-y')" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\log(1-y')" title="\log(1-y')" /></a> when <a href="https://www.codecogs.com/eqnedit.php?latex=y=0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y=0" title="y=0" /></a> just as we had defined earlier.
 
 While the above is only the error for only one example (datapoint), we need to account for all the examples. Therefore, we find the mean of the errors by summing all of them and dividing by the number of examples as below.
-\begin{equation}
-(Cost/Loss \space fn.)L = 
--\frac{1}{M} \sum_{i=0}^M\Big(y.\log(y') + (1-y).\log(1-y')\Big)
-\end{equation}
+
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=(Cost/Loss&space;\&space;fn.)L&space;=&space;-\frac{1}{M}&space;\sum_{i=0}^M\Big(y.\log(y')&space;&plus;&space;(1-y).\log(1-y')\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(Cost/Loss&space;\&space;fn.)L&space;=&space;-\frac{1}{M}&space;\sum_{i=0}^M\Big(y.\log(y')&space;&plus;&space;(1-y).\log(1-y')\Big)" title="(Cost/Loss \ fn.)L = -\frac{1}{M} \sum_{i=0}^M\Big(y.\log(y') + (1-y).\log(1-y')\Big)" /></a>
 
 The code for this would be as below:
 
@@ -438,42 +435,44 @@ plot_loss(losses)
 
 This will usually be the toughest part to understand but I have put in very easy terms.
 
-Gradient descent in layman words is like walking down a hill. This hill refers to the error in our case. So as you walk down the hill, the error ($Loss$) goes down. Therefore, our goal is to walk down to the point of least error. Now you must observe that you need to tweak the parameters $W$ and $b$ in order to decrease the $Loss$. Hence, we find the derivative with respect to the parameters and update the parameters accordingly. You'll understand how this works in detail next.
+Gradient descent in layman words is like walking down a hill. This hill refers to the error in our case. So as you walk down the hill, the error (<a href="https://www.codecogs.com/eqnedit.php?latex=Loss" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Loss" title="Loss" /></a>) goes down. Therefore, our goal is to walk down to the point of least error. Now you must observe that you need to tweak the parameters <a href="https://www.codecogs.com/eqnedit.php?latex=W" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W" title="W" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b" title="b" /></a> in order to decrease the <a href="https://www.codecogs.com/eqnedit.php?latex=Loss" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Loss" title="Loss" /></a>. Hence, we find the derivative with respect to the parameters and update the parameters accordingly. You'll understand how this works in detail next.
 
-The gradient descent algorithm is very similar to what we had used for linear regression. As in the below figure, you can observe that there is a parameter $p$ which is adjusted so as to find the minimum value of $Loss$.
+The gradient descent algorithm is very similar to what we had used for linear regression. As in the below figure, you can observe that there is a parameter <a href="https://www.codecogs.com/eqnedit.php?latex=p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p" title="p" /></a> which is adjusted so as to find the minimum value of <a href="https://www.codecogs.com/eqnedit.php?latex=Loss" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Loss" title="Loss" /></a>.
 
-But, how can we adjust the value of $p$ so that I get the least $loss$?
+But, how can we adjust the value of <a href="https://www.codecogs.com/eqnedit.php?latex=p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p" title="p" /></a> so that I get the least <a href="https://www.codecogs.com/eqnedit.php?latex=loss" target="_blank"><img src="https://latex.codecogs.com/gif.latex?loss" title="loss" /></a>?
 
-Well, that's simple! Just find its derivative or the slope. Mathematically, the slope is $zero$ at the minimal point(minima) [You can refer to this wonderful [Khan Academy video](https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-1/v/derivative-as-slope-of-curve) if you do not know about derivatives and the slope.] and if you observe keenly, the slope is negative on the left of minima and positive on the right of minima. And when $p$ is to the left of minima, we need to add some value so that it moves towards optimal $p$ and when $p$ is to the right subtract some value.
+Well, that's simple! Just find its derivative or the slope. Mathematically, the slope is $zero$ at the minimal point(minima) [You can refer to this wonderful [Khan Academy video](https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-1/v/derivative-as-slope-of-curve) if you do not know about derivatives and the slope.] and if you observe keenly, the slope is negative on the left of minima and positive on the right of minima. And when <a href="https://www.codecogs.com/eqnedit.php?latex=p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p" title="p" /></a> is to the left of minima, we need to add some value so that it moves towards optimal <a href="https://www.codecogs.com/eqnedit.php?latex=p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p" title="p" /></a> and when <a href="https://www.codecogs.com/eqnedit.php?latex=p" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p" title="p" /></a> is to the right subtract some value.
 
-So, all we need to do is to subtract the slope! When the slope is $-ve$ add some value (like the slope!) and when the slope is $+ve$ subtract some value (slope again!). Moreover, as we edge towards the minima the slope too reduces which is very beneficial as we need to take tinier steps.
+So, all we need to do is to subtract the slope! When the slope is <a href="https://www.codecogs.com/eqnedit.php?latex=-ve" target="_blank"><img src="https://latex.codecogs.com/gif.latex?-ve" title="-ve" /></a> add some value (like the slope!) and when the slope is <a href="https://www.codecogs.com/eqnedit.php?latex=&plus;ve" target="_blank"><img src="https://latex.codecogs.com/gif.latex?&plus;ve" title="+ve" /></a> subtract some value (slope again!). Moreover, as we edge towards the minima the slope too reduces which is very beneficial as we need to take tinier steps.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/Gradient%20Descent.gif" alt="Gradient Descent GIF">
 
-We find the derivative of the $Loss$ with respect to $W$ and $b$ in our case.
+We find the derivative of the <a href="https://www.codecogs.com/eqnedit.php?latex=Loss" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Loss" title="Loss" /></a> with respect to <a href="https://www.codecogs.com/eqnedit.php?latex=W" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W" title="W" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b" title="b" /></a> in our case.
 
-The resulting derivatives w.r.t $W$ and $b$ would be:
+The resulting derivatives w.r.t <a href="https://www.codecogs.com/eqnedit.php?latex=W" target="_blank"><img src="https://latex.codecogs.com/gif.latex?W" title="W" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=b" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b" title="b" /></a> would be:
 
-\begin{equation}
-\frac{\partial{L}}{\partial{z}}  = y' - y \\
-\frac{\partial{L}}{\partial{W}} = \frac{\partial{L}}{\partial{z}} . \frac{\partial z}{\partial W} \qquad [By \ Chain \ Rule]\\
-\implies \partial W = x. (y' - y) \qquad [\because z = W.X + b]\\
-\frac{\partial{L}}{\partial{b}} = \frac{\partial{L}}{\partial{z}} . \frac{\partial z}{\partial b} \qquad [By \ Chain \ Rule]\\
-\implies \partial b = (y' - y)
-\end{equation}
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial{L}}{\partial{z}}&space;=&space;y'&space;-&space;y&space;\\" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial{L}}{\partial{z}}&space;=&space;y'&space;-&space;y&space;\\" title="\frac{\partial{L}}{\partial{z}} = y' - y \\" /></a>
+<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial{L}}{\partial{W}}&space;=&space;\frac{\partial{L}}{\partial{z}}&space;.&space;\frac{\partial&space;z}{\partial&space;W}&space;\qquad&space;[By&space;\&space;Chain&space;\&space;Rule]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial{L}}{\partial{W}}&space;=&space;\frac{\partial{L}}{\partial{z}}&space;.&space;\frac{\partial&space;z}{\partial&space;W}&space;\qquad&space;[By&space;\&space;Chain&space;\&space;Rule]" title="\frac{\partial{L}}{\partial{W}} = \frac{\partial{L}}{\partial{z}} . \frac{\partial z}{\partial W} \qquad [By \ Chain \ Rule]" /></a>
+<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\implies&space;\partial&space;W&space;=&space;x.&space;(y'&space;-&space;y)&space;\qquad&space;[\because&space;z&space;=&space;W.X&space;&plus;&space;b]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\implies&space;\partial&space;W&space;=&space;x.&space;(y'&space;-&space;y)&space;\qquad&space;[\because&space;z&space;=&space;W.X&space;&plus;&space;b]" title="\implies \partial W = x. (y' - y) \qquad [\because z = W.X + b]" /></a>
+<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial{L}}{\partial{b}}&space;=&space;\frac{\partial{L}}{\partial{z}}&space;.&space;\frac{\partial&space;z}{\partial&space;b}&space;\qquad&space;[By&space;\&space;Chain&space;\&space;Rule]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial{L}}{\partial{b}}&space;=&space;\frac{\partial{L}}{\partial{z}}&space;.&space;\frac{\partial&space;z}{\partial&space;b}&space;\qquad&space;[By&space;\&space;Chain&space;\&space;Rule]" title="\frac{\partial{L}}{\partial{b}} = \frac{\partial{L}}{\partial{z}} . \frac{\partial z}{\partial b} \qquad [By \ Chain \ Rule]" /></a>
+<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=\implies&space;\partial&space;b&space;=&space;(y'&space;-&space;y)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\implies&space;\partial&space;b&space;=&space;(y'&space;-&space;y)" title="\implies \partial b = (y' - y)" /></a>
 
 I've skipped a few steps which are unnecessary, but if interested, you can refer to this [video](https://youtu.be/hWLdFMccpTY?t=225).
 
 #### Updating the parameters
 
-As to the last part of updating the parameters, with the slopes, we multiply the slope by a dampening factor $\alpha$ so that the parameters don't overshoot when having very high error.
+As to the last part of updating the parameters, with the slopes, we multiply the slope by a dampening factor <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a> so that the parameters don't overshoot when having very high error.
 
-
-\begin{equation}
-\qquad m = m - \alpha . \partial{m} \\
-\quad\space\space b = b - \alpha . \partial{b}
-\end{equation}
+<p align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=m&space;=&space;m&space;-&space;\alpha&space;.&space;\partial{m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m&space;=&space;m&space;-&space;\alpha&space;.&space;\partial{m}" title="m = m - \alpha . \partial{m}" /></a>
+<br>
+<a href="https://www.codecogs.com/eqnedit.php?latex=b&space;=&space;b&space;-&space;\alpha&space;.&space;\partial{b}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b&space;=&space;b&space;-&space;\alpha&space;.&space;\partial{b}" title="b = b - \alpha . \partial{b}" /></a>
 
 You'll now implement the same `gradient_descent` algorithm as below.
 
@@ -743,9 +742,7 @@ We had earlier created a test dataset, you'll now test your regression model aga
 
 The formula for accuracy is:
 
-\begin{equation}
-Accuracy = 100 - \frac{Sum \ of \ Error}{No. \ of \ examples} * 100
-\end{equation}
+<a href="https://www.codecogs.com/eqnedit.php?latex=Accuracy&space;=&space;100&space;-&space;\frac{Sum&space;\&space;of&space;\&space;Error}{No.&space;\&space;of&space;\&space;examples}&space;*&space;100" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Accuracy&space;=&space;100&space;-&space;\frac{Sum&space;\&space;of&space;\&space;Error}{No.&space;\&space;of&space;\&space;examples}&space;*&space;100" title="Accuracy = 100 - \frac{Sum \ of \ Error}{No. \ of \ examples} * 100" /></a>
 
 
 ```python
@@ -785,6 +782,7 @@ print('b = ', b)
      [-3.9152981]]
     b =  [[-0.68703193]]
     
+We have obtained an accuracy of 95% which is pretty good!
 
 ### Conclusion
 
