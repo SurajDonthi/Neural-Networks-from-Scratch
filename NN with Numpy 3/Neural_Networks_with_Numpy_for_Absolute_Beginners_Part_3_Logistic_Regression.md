@@ -162,7 +162,8 @@ plot_datapoints(X, y)
 ```
 
 
-![png](output_20_0.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_20_0.png/>
 
 
 The two set of datapoints belong to the two classes. Our goal is to find an optimal decision boundary that separates these two classes.
@@ -310,7 +311,8 @@ plot_data_with_contour(X_train, y_train, W, b)
 ```
 
 
-![png](output_36_0.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_36_0.png/>
 
 
 It's now time to define the loss function!!
@@ -428,7 +430,8 @@ plot_loss(losses)
 ```
 
 
-![png](output_45_0.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_45_0.png/>
 
 
 ## Gradient Descent
@@ -569,7 +572,8 @@ plot_graphs(dataset, params, losses)
 ```
 
 
-![png](output_56_0.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_56_0.png/>
 
 
 We have obtained a beautiful plot of the decision boundary as well as the Loss.
@@ -653,7 +657,8 @@ del losses[:]
 ```
 
 
-![png](output_60_0.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_0.png/>
 
 
     Shape of X_train (400, 2)
@@ -673,7 +678,8 @@ del losses[:]
     
 
 
-![png](output_60_2.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_2.png/>
 
 
     ------------------------------------------------------------------------------------
@@ -685,7 +691,8 @@ del losses[:]
     
 
 
-![png](output_60_4.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_4.png/>
 
 
     ------------------------------------------------------------------------------------
@@ -697,7 +704,8 @@ del losses[:]
     
 
 
-![png](output_60_6.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_6.png/>
 
 
     ------------------------------------------------------------------------------------
@@ -709,7 +717,8 @@ del losses[:]
     
 
 
-![png](output_60_8.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_8.png/>
 
 
     ------------------------------------------------------------------------------------
@@ -721,7 +730,8 @@ del losses[:]
     
 
 
-![png](output_60_10.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_10.png/>
 
 
     ------------------------------------------------------------------------------------
@@ -733,7 +743,8 @@ del losses[:]
     
 
 
-![png](output_60_12.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_12.png/>
 
 
 ### Prediction
@@ -742,6 +753,7 @@ We had earlier created a test dataset, you'll now test your regression model aga
 
 The formula for accuracy is:
 
+<p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=Accuracy&space;=&space;100&space;-&space;\frac{Sum&space;\&space;of&space;\&space;Error}{No.&space;\&space;of&space;\&space;examples}&space;*&space;100" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Accuracy&space;=&space;100&space;-&space;\frac{Sum&space;\&space;of&space;\&space;Error}{No.&space;\&space;of&space;\&space;examples}&space;*&space;100" title="Accuracy = 100 - \frac{Sum \ of \ Error}{No. \ of \ examples} * 100" /></a>
 
 
@@ -774,7 +786,8 @@ print('b = ', b)
     
 
 
-![png](output_63_1.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_63_1.png" />
 
 
     Hence 
