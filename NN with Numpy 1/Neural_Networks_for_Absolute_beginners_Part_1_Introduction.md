@@ -11,7 +11,7 @@ Moreover, just learning these frameworks and not understanding the underlying co
 
 Whether you want to work in the industry or academia, you will be working, tweaking and playing with the models for which you need to have a clear understanding. Both the industry and the academia expect you to have full clarity of these concepts including the math.
 
-In this series of tutrials, I'll make it extremely simple to understand Neural Networks by providing step by step explanation. Also, the math you'll need will be the level of high school.
+In this series of tutorials, I'll make it extremely simple to understand Neural Networks by providing step by step explanation. Also, the math you'll need will be the level of high school.
 
 Let us start with the nemesis of artificial neural networks and gain some inspiration as to how it evolved.
 
@@ -19,7 +19,7 @@ Let us start with the nemesis of artificial neural networks and gain some inspir
 
 It must be noted that most of the Algorithms for Neural Networks that were developed during the period 1950-2000 and now existing, are highly inspired by the working of our brain, the neurons, their structure and how they learn and transfer data. The most popular works include the Perceptron(1958) and the Neocognitron(1980). These papers were extremely instrumental in unwiring the brain code. They try to mathematically formulate a model of the neural networks in our brain. 
 
-And everything changed after the God Father of AI Geoffrey Hinton formulated the back propagation algorithm in 1986(That's right! what you are learnig is more than 30 years old!).
+And everything changed after the God Father of AI Geoffrey Hinton formulated the back-propagation algorithm in 1986(That's right! what you are learning is more than 30 years old!).
 
 ## A biological Neuron
 
@@ -27,19 +27,19 @@ And everything changed after the God Father of AI Geoffrey Hinton formulated the
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSivgdRoiDD8I1uBa1pUk9uALPbsE4LyoSVJpJkxLbT3DqTN-UwAcn4La9jmADG2u-8Ul5dZmDpwVtw/pub?w=3842&h=1698" width=800>
 </p>
 
-The figure above shows a biological neuron. It has *dendrites* that recieve information from neurons. The recieved information is passed on to the *cell body or the nucleus* of the neuron. The *nucleus* is where the information is processed and passed on to the next layer of neurons through *axons*.
+The figure above shows a biological neuron. It has *dendrites* that receive information from neurons. The received information is passed on to the *cell body or the nucleus* of the neuron. The *nucleus* is where the information is processed and passed on to the next layer of neurons through *axons*.
 
-Our brain consists of about 100 billion such neurons which communicate through electrochemical signals. Each neuron is connected to 100s and 1000s of other neurons which constantly transmit and recieve signals. 
+Our brain consists of about 100 billion such neurons which communicate through electrochemical signals. Each neuron is connected to 100s and 1000s of other neurons which constantly transmit and receive signals. 
 
-But how can our brain precess so much information just by sending electrochemical signals? How can the neurons understand which signal is important and which isn't? How do the neurons know what information to pass forward?
+But how can our brain process so much information just by sending electrochemical signals? How can the neurons understand which signal is important and which isn't? How do the neurons know what information to pass forward?
 
-The electrochemical signals consist of strong and weak signals. The strong signals are the ones to dominate which information is important. So only the strong signal or a combination of them pass through the neclues(the CPU of neurons) and are transmitted to the next set of neurons through the axons.
+The electrochemical signals consist of strong and weak signals. The strong signals are the ones to dominate which information is important. So only the strong signal or a combination of them pass through the nuclues (the CPU of neurons) and are transmitted to the next set of neurons through the axons.
 
 But how are some signals strong and some signals week?
 
 Well, through millions of years of evolution, the neurons have become sensitive to certain kinds of signals. When the neuron encounters a specific pattern, they get triggered(activated) and as a consequence send strong signals to other neurons and hence the information is transmitted.
 
-Most of us also know that different regions of our brain are activated (/receptive) for different actions like seeing, hearing, creative thinking and so on. This is because the neurons belonging to a specific region in the brain are trained to process a certain kind of information better and hence get activated only when certain kinds of information is being sent.The figure below gives us a better understanding of the different receptive regions of the brain.
+Most of us also know that different regions of our brain are activated (/receptive) for different actions like seeing, hearing, creative thinking and so on. This is because the neurons belonging to a specific region in the brain are trained to process a certain kind of information better and hence get activated only when certain kinds of information is being sent. The figure below gives us a better understanding of the different receptive regions of the brain.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%201/Images/Blausen_0102_Brain_Motor%26Sensory_(flipped).png" width="50%">
@@ -51,11 +51,11 @@ It has been shown through Neuroplasticity that the different regions of the brai
 
 >>>>>>>>>>[![](https://img.youtube.com/vi/xzbHtIrb14s/0.jpg)](https://www.youtube.com/watch?v=xzbHtIrb14s)
 
-But what is the mechanism by which the neurons become sensitve?
+But what is the mechanism by which the neurons become sensitive?
 
 Unfortunately, neuroscientists are still trying to figure that out!!
 
-But fortunately enough, god father Geff has saved the day by inventing back propagation which accomplishes the same task for our Artificial Neurons, ie., sensitizing them to certain patterns.
+But fortunately enough, god father of AI Geff has saved the day by inventing back propagation which accomplishes the same task for our Artificial Neurons, i.e., sensitizing them to certain patterns.
 
 In the next section, we'll explore the working of a perceptron and also gain a mathematical intuition.
 
@@ -65,7 +65,7 @@ In the next section, we'll explore the working of a perceptron and also gain a m
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vQi5UtWOScAOVixzrE42U59N2o6ruP8_LgHlTF8fSQH4glqZa6AsbkNxmwWAsYKdcjBmUQSyG5zFCod/pub?w=3720&h=2884" alt="Drawing" width="500"/>
 </p>
 
-From the figure, you can observe that the perceptron is a reflection of the biological neuron. The inputs combined with the weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) are analogous to dendrties. These values are summed and passed through an activation function (like the thresholding function as shown in fig.). This is analogous to the nucleus. Finally, the activated value is transmitted to the next neuron/perceptron which is analogous to the axons.
+From the figure, you can observe that the perceptron is a reflection of the biological neuron. The inputs combined with the weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) are analogous to dendrites. These values are summed and passed through an activation function (like the thresholding function as shown in fig.). This is analogous to the nucleus. Finally, the activated value is transmitted to the next neuron/perceptron which is analogous to the axons.
 
 The latent weights(<img src="http://latex.codecogs.com/gif.latex?w_i" title="w_i" />) multiplied with each input(<img src="http://latex.codecogs.com/gif.latex?x_i" title="x_i" />) depicts the significance(strength) of the respective input signal. Hence, larger the value of a weight, more important is the feature.
 
@@ -213,23 +213,23 @@ Then the output will be as shown in below table:
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vRa_92metML3nIWcHhCTB7AYVoAbvIq3-1Phyixx_l05GJ0IOZ86MoUnIrwhqpxMZRQ2N97FVPIJsY-/pub?w=3288&h=1082" alt="AND Gate" width="700"/>
 </p>
 
-So how can you fix the values of weights so that you get the right output?
+So, how can you fix the values of weights so that you get the right output?
 
 By intuition, you can easily observe that <img src="http://latex.codecogs.com/gif.latex?w_0" title="w_0" /> must be increased and <img src="http://latex.codecogs.com/gif.latex?w_1" title="w_1" /> and <img src="http://latex.codecogs.com/gif.latex?w_0" title="w_0" /> must be reduced or rather made negative so that you obtain the actual output. But if you breakdown this intuition, you will observe that you are actually finding the difference between the actual output and the predicted output and finally reflecting that on the weights...
 
-This is a very important concept that you will be digging deeper and will  be the core to formulate the ideas behind *gradient descent* and also *backward propagation*.
+This is a very important concept that you will be digging deeper and will be the core to formulate the ideas behind *gradient descent* and also *backward propagation*.
 
 ## What did you learn?
 
 - Neurons must be made sensitive to a pattern in order to recognize it.
-- So similarly, in our perceptron/artificial neuron, <b>the weights are what is to be learnt</b>.
+- So, similarly, in our perceptron/artificial neuron, <b>the weights are what is to be learnt</b>.
 
 In the later articles you'll fully understand how the weights are trained to recognize patterns and also the different techniques that exist.
 
 As you'll see later, the neural networks are very similar to the structure of biological neural networks.
 
-While it is true that we learnt only a few small concepts (although very crucial) in this first part of the article,  they will serve as the strong foundation for implementing Neural Networks. Moreover, I'm keeping this article short and sweet so that too much is information is not dumped at once and will help absorb more!
+While it is true that we learnt only a few small concepts (although very crucial) in this first part of the article, they will serve as the strong foundation for implementing Neural Networks. Moreover, I'm keeping this article short and sweet so that too much is information is not dumped at once and will help absorb more!
 
-In the next tutorial, you will learn about <b>Linear Regression</b> (which can otherwise be called a perceptron with linear activation function) in detail and also implement them. The <b>Gradient Descent algorithm which helps learn the weights</b> are described and implemented in detail. Lastly, you'll be able to <b>predict the outcome of an event</b> with the help of Linear Regression. So head on to the next article to implement it!
+In the next tutorial, you will learn about <b>Linear Regression</b> (which can otherwise be called a perceptron with linear activation function) in detail and also implement them. The <b>Gradient Descent algorithm which helps learn the weights</b> are described and implemented in detail. Lastly, you'll be able to <b>predict the outcome of an event</b> with the help of Linear Regression. So, head on to the next article to implement it!
 
 You can checkout the next part of the article here: 
