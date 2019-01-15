@@ -163,7 +163,7 @@ plot_datapoints(X, y)
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_20_0.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_20_0.png" />
 
 
 The two set of datapoints belong to the two classes. Our goal is to find an optimal decision boundary that separates these two classes.
@@ -312,7 +312,7 @@ plot_data_with_contour(X_train, y_train, W, b)
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_36_0.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_36_0.png" />
 
 
 It's now time to define the loss function!!
@@ -431,7 +431,7 @@ plot_loss(losses)
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_45_0.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_45_0.png" />
 
 
 ## Gradient Descent
@@ -573,7 +573,7 @@ plot_graphs(dataset, params, losses)
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_56_0.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_56_0.png" />
 
 
 We have obtained a beautiful plot of the decision boundary as well as the Loss.
@@ -658,7 +658,7 @@ del losses[:]
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_0.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_0.png" />
 
 
     Shape of X_train (400, 2)
@@ -679,7 +679,7 @@ del losses[:]
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_2.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_2.png" />
 
 
     ------------------------------------------------------------------------------------
@@ -692,7 +692,7 @@ del losses[:]
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_4.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_4.png" />
 
 
     ------------------------------------------------------------------------------------
@@ -705,7 +705,7 @@ del losses[:]
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_6.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_6.png" />
 
 
     ------------------------------------------------------------------------------------
@@ -718,7 +718,7 @@ del losses[:]
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_8.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_8.png" />
 
 
     ------------------------------------------------------------------------------------
@@ -731,7 +731,7 @@ del losses[:]
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_10.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_10.png" />
 
 
     ------------------------------------------------------------------------------------
@@ -744,7 +744,7 @@ del losses[:]
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_12.png/>
+<img src="https://raw.githubusercontent.com/SurajDonthi/Article-Tutorials/master/NN%20with%20Numpy%203/Images/output_60_12.png" />
 
 
 ### Prediction
