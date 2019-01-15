@@ -609,7 +609,9 @@ parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> &
 
 
 ```python
-def grad_desc(m, b, X_train, y_train, y_pred):
+def gradient(m, b, X_train, y_train, y_pred):
+    
+    # Compute the gradients
     dm = np.mean((y_pred - y_train) * X_train)
     db = np.mean(y_pred - y_train)
     
@@ -645,9 +647,9 @@ and ```update_params```.
 
 
 ```python
-def back_prop(X_train, y_train, y_pred, m, b, l_r):
+def grad_desc(X_train, y_train, y_pred, m, b, l_r):
 
-    dm, db = grad_desc(m, b, X_train, y_train, y_pred)
+    dm, db = gradient(m, b, X_train, y_train, y_pred)
     
     m, b = update_params(m, b, dm, db, l_r)
 
@@ -694,7 +696,7 @@ for i in range(epochs):
     loss = compute_loss(y_train, y_pred)
     losses.append(loss)
 
-    m, b = back_prop(X_train, y_train, y_pred, m, b, l_r)
+    m, b = grad_desc(X_train, y_train, y_pred, m, b, l_r)
 
     if(i%10==0):
         print('Epoch: ', i)
