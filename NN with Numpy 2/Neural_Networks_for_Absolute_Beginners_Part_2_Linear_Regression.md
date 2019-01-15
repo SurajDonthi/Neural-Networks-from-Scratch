@@ -642,7 +642,7 @@ def update_params(m, b, dm, db, l_r):
 
 From decreasing the values of <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />, they are incrementally moving towards the minima. So updating the parameters this way has to be done for many iterations, which is called <img src="http://latex.codecogs.com/gif.latex?epoch" title="epoch" />.
 
-Let us define a function ```back_prop```, which calls both ```grad_desc``` 
+Let us define a function ```grad_desc```, which calls both ```gradient``` 
 and ```update_params```.
 
 
