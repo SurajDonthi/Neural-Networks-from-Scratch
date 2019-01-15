@@ -122,10 +122,10 @@ M = 200
 # No. of input features
 n = 1
 
-# Learning Rate - Define during explanation
+# Learning Rate
 l_r = 0.05
 
-# Number of iterations for updates - Define during explanation
+# Number of iterations for updates
 epochs = 51
 ```
 
@@ -146,7 +146,7 @@ Now, it's time to visualize what the data generator has cooked up!
 
 
 ```python
-def plot_graph(X, y):
+def plot_datapoints(X, y):
     
     # Plot the original set of datapoints
     _ = plt.scatter(X, y, alpha=0.8)
