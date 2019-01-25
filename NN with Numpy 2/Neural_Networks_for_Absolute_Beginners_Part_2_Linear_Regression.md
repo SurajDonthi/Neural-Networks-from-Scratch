@@ -1,4 +1,3 @@
-
 # Neural Networks with Numpy for Absolute Beginners - Part 2: Linear Regression
 
 ##### In this tutorial, you will learn to implement Linear Regression for prediction using Numpy in detail and also visualize how the algorithm learns epoch by epoch. In addition to this, you will explore two layer Neural Networks.
@@ -42,19 +41,14 @@ next section i.e., <b>*Linear Regression*</b>.
 
 Fitting a linear equation on a given set of data in 
 <img src="http://latex.codecogs.com/gif.latex?n" title="n" />-dimensional 
-space is called <b>Linear Regression</b>. The image below shows an example of Linear Regression. 
+space is called <b>Linear Regression</b>. The below GIF image shows an example of Linear Regression. 
 
 <p align="center">
-<img src="https://cdn-images-1.medium.com/max/1600/1*eeIvlwkMNG1wSmj3FR6M2g.gif" alt="Drawing" width="500"/>
+<img src="https://cdn-images-1.medium.com/max/1600/1*eeIvlwkMNG1wSmj3FR6M2g.gif" alt="Linear Regression GIF" width="500"/>
 </p>
 
-In simple words, you try to find the best values of 
-<img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and 
-<img src="http://latex.codecogs.com/gif.latex?b" title="b" /> 
-that best fits the set of points as shown in the above figure. 
-When we have obtained the best possible fit, we can predict the 
-<img src="http://latex.codecogs.com/gif.latex?y" title="y" /> 
-values given <img src="http://latex.codecogs.com/gif.latex?x" title="x" />.
+In simple words, you try to find the best values of *m* and *b* that best fits the set of points as shown in the above figure. 
+When we have obtained the best possible fit, we can predict the *y* values given *x*.
 
 A very popular example is the *housing price prediction* problem. 
 In this problem you are given a set of values like the area of 
@@ -104,15 +98,9 @@ is a rich package with many machine learning algorithms.
 Although, you get prebuilt functions for performing linear 
 regression, you are going to build it from scratch in this tutorial.
 
-For creating the dataset, you must first set a list of hyperparameters - 
-while <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> are parameters, the number of samples, the number of 
-input features, the number of neurons, the learning rate, the number 
-of iterations/epochs for training etc. are called hyperparameters. 
-You shall learn about these hyperparameters as you implement the algorithm.
+For creating the dataset, you must first set a list of hyperparameters - while *m* and *b* are parameters, the number of samples, the number of input features, the number of neurons, the learning rate, the number of iterations/epochs for training etc. are called hyperparameters. You shall learn about these hyperparameters as you implement the algorithm.
 
-For now, you shall set the number of training samples, the number of 
-input features, the learning rate and epochs. You shall 
-understand learning rate and epochs in a short while.
+For now, you shall set the number of training samples, the number of input features, the learning rate and epochs. You shall understand learning rate and epochs in a short while.
 
 
 ```python
@@ -146,7 +134,7 @@ Now, it's time to visualize what the data generator has cooked up!
 
 
 ```python
-def plot_datapoints(X, y):
+def plot_graph(X, y):
     
     # Plot the original set of datapoints
     _ = plt.scatter(X, y, alpha=0.8)
@@ -160,10 +148,10 @@ def plot_datapoints(X, y):
 
 
 ```python
-plot_datapoints(X, y)
+plot_graph(X, y)
 ```
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_16_0.png"/>
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_16_0.png" alt="Plot of datapoints"/>
 </p>
 
 
@@ -179,6 +167,7 @@ print('Shape of vector y:', y.shape)
     Shape of vector X: (200, 1)
     Shape of vector y: (200,)
     
+We need reset the size of *y* to `(200, 1)` so that we do not get errors during vector multiplications.
 
 
 ```python
@@ -206,9 +195,7 @@ Next you will have to split the dataset into train and test sets,
 so that you can test the accuracy of the 
 regression model using a part of the dataset once you have trained the model.
 
-Now let's split the data into train set and test set. You shall 
-also reset the sizes so there is no 
-discrepancy in doing matrix computations.
+Now let's split the data into train set and test set.
 
 
 ```python
@@ -233,12 +220,15 @@ print(X_test.shape, y_test.shape)
 As you can see, 80% of the data i.e., 80% of 200 data points is 160 which is correct.
 
 So, what have we achieved till now?
+
 We have done the initial <b>data preprocessing</b> and also <b>explored the data</b> through visualizing it. 
 This is typically the first step while modelling any machine learning algorithm. We have also split the data for testing the accuracy of the model once it is trained.
 
 What do we do next?
-Clearly as shown in the above GIF image, we need to consider a random line at first and then fit it on the data through training. 
-Then the next step is to randomly <b>generate a line with a random slope and an intercept(bias)</b>. The goal is to achieve the best fit for the line.
+
+Clearly as shown in the above Linear Regression GIF image, we need to consider a random line at first and then fit it on the data through training.
+
+Therefore, the next step is to randomly <b>generate a line with a random slope and an intercept(bias)</b>. The goal is to achieve the best fit for the line.
 
 ```python
 # Function to generate parameters of the linear regression model, m & b.
@@ -256,9 +246,7 @@ def init_params():
 m, b = init_params()
 ```
 
-Now, given <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> & 
-<img src="http://latex.codecogs.com/gif.latex?b" title="b" />, we can 
-plot the line so generated.
+Now, given *m* & *b*, we can plot the line generated.
 
 Let's update the function ```plot_graph``` to show the predicted line too.
 
@@ -316,23 +304,21 @@ plot_pred_line(X_train, y_train, m, b)
 
 
 <p align="center">
-<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_32_0.png" />
+<img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_32_0.png" alt="Plot of datapoints with Randomly Generated Line" />
 </p>
 
 
 
 Since the line is now generated, you'll need to predict the 
-values it is producing for a given value 
-of <img src="http://latex.codecogs.com/gif.latex?x" title="x" />. 
+values it is producing for a given value of *x*. 
 From this value, all there is to do is to calculate 
 their mean squared error. Why?
 
-How could we find the difference between the actual output and the predicted output? The simplest way would be to just subtract these two differences. We have a random line that gives an output <img src="http://latex.codecogs.com/gif.latex?y_pred" title="y_pred" /> for every <img src="http://latex.codecogs.com/gif.latex?x" title="x" /> that is given, but it's surely not the actual output. Luckily, we have the actual output of all <img src="http://latex.codecogs.com/gif.latex?x" title="x" /> too! So what we do is instead of taking the difference directly, we square it and take the mean for all the given points & this is called <img src="http://latex.codecogs.com/gif.latex?Mean&space;\&space;Squared&space;\&space;Error" title="Mean \ Squared \ Error" />.
+How could we find the difference between the actual output and the predicted output? The simplest way would be to just subtract these two differences. We have a random line that gives an output *y_pred* for every *x* that is given, but it's surely not the actual output. Luckily, we have the actual output of all *x* too! So what we do is instead of taking the difference directly (which is technically called absolute distance or L1 distance), we square it (called the Euclidean distance or L2 distance) and take the mean for all the given points & this is called *Mean Squared Error*.
 
-Let us now predict the values of <img src="http://latex.codecogs.com/gif.latex?y_{pred}" title="y_{pred}" /> 
-from the parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> & 
-<img src="http://latex.codecogs.com/gif.latex?b" title="b" /> given the datapoints 
-<img src="http://latex.codecogs.com/gif.latex?X_{train}" title="X_{train}" /> 
+Let us now predict the values of *y_pred* 
+from the parameters *m* & *b* given the datapoints 
+*X_train* 
 by defining a function ```forward_prop```.
 
 
@@ -352,30 +338,27 @@ y_pred = forward_prop(X_train, m, b)
 ## Cost/Loss Function
 
 As mentioned earlier, now that you have both the corresponding values for 
-<img src="http://latex.codecogs.com/gif.latex?X_{train}" title="X_{train}" /> 
-and the predicted values 
-for <img src="http://latex.codecogs.com/gif.latex?y(y_{pred})" title="y(y_{pred})" /> you'll 
-calculate the Cost/Error/Loss Function. We shall stick to the term Loss. 
+*X_train* and the predicted values for *y_pred* you'll 
+calculate the Cost/Error/Loss Function.
 
-The <img src="http://latex.codecogs.com/gif.latex?Loss(Mean&space;\&space;Squared&space;\&space;Error)" title="Loss(Mean \ Squared \ Error)" /> is:
+The *Loss(Mean Squared Error)* is:
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?MSE&space;=&space;(y'^{(i)}&space;-&space;y^{(i)})^2" title="MSE = (y'^{(i)} - y^{(i)})^2" />
 </p>
 
-<br>Summing over all <img src="http://latex.codecogs.com/gif.latex?M" title="M" /> examples, 
-we obtain the <img src="http://latex.codecogs.com/gif.latex?Cost/Loss&space;\&space;fn." title="Cost/Loss \ fn." /> 
-as below:
+<br>Summing over all *M* examples, 
+we obtain the *Loss fn.* as below:
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?L&space;=&space;\frac{1}{2M}\sum_{i=1}^M(y'^{(i)}&space;-&space;y^{(i)})^2" title="L = \frac{1}{2M}\sum_{i=1}^M(y'^{(i)} - y^{(i)})^2" />
 </p>
 
-Our goal is to obviously minimize the <img src="http://latex.codecogs.com/gif.latex?Loss" title="Loss" /> so the regression line predicts more accurately.
+Our goal is to obviously minimize the *Loss* so the regression line predicts more accurately.
 
 Let us now codify this.
 
-You will also save each value of <img src="http://latex.codecogs.com/gif.latex?loss" titlloss="M" /> that will be computed to graphically visualize how it changes during training.
+You will also save each value of *Loss* that will be computed to graphically visualize how it changes during training.
 
 
 ```python
@@ -464,9 +447,7 @@ def plot_pred_line(X, y, m, b,losses=None):
     return 
 ```
 
-You'll visualize the line created from the parameters 
-<img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
-and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />.
+You'll visualize the line created from the parameters *m* and *b*.
 
 
 ```python
@@ -481,75 +462,62 @@ Now that you have computed the loss, let's minimize it.
 
 ## Gradient Descent for Linear Regression
 
-Since, <img src="http://latex.codecogs.com/gif.latex?Loss" title="Loss" /> is the dependent variable and <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
-& <img src="http://latex.codecogs.com/gif.latex?c" title="c" /> are the independent variables, 
-we'll have to update <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
-& <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> so as to find the minimum Loss.
+Since, *Loss* is the dependent variable and *m* 
+& *b* are the independent variables, we'll have to update *m* 
+& *b* so as to find the minimum Loss.
 
-So, the next question would be, How can I update the parameters 
-<img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and 
-<img src="http://latex.codecogs.com/gif.latex?b" title="b" />?
+So, the next question would be...
 
+How can I update the parameters *m* and *b*?
 
-Let us for instance consider just a single parameter <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-as shown below and let <img src="http://latex.codecogs.com/gif.latex?t(target)" title="t(target)" /> 
-be the actual value that has to be predicted. 
-We see that as <img src="http://latex.codecogs.com/gif.latex?cost" title="cost" /> 
-converges to the minima, 
-the parameter <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-reaches an optimum value for the minimum 
-<img src="http://latex.codecogs.com/gif.latex?cost" title="cost" />. 
-Let's say the optimum value of <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> is 
-<img src="http://latex.codecogs.com/gif.latex?a" title="a" />.
+Let us for instance consider just a single parameter *p* 
+as shown below and let *t(target)* 
+be the value that has to be predicted. 
+We see that as *cost* converges to the minima, 
+the parameter *p* reaches a specific value called the optimal value. 
+Let's say the optimum value of *p* is *a*.
 
 <p align="center">
 <img src="https://cdn-images-1.medium.com/max/1600/1*pwPIG-GWHyaPVMVGG5OhAQ.gif" alt="Drawing" width="800"/>
 </p>
 
-Let's gain a bit of intuition as to what the graph is saying.
+You can make a few observations from this graph.
 
-It is clear from the graph, that as 
-<img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-moves towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />, 
+It is clear from the graph, that as *p* 
+moves towards *a*, 
 the Cost decreases and as it 
 moves away from it, the cost increases.
 
-<b>Now, how can we make <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-move towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />
-, whether it is on the 
-left or to the right of <img src="http://latex.codecogs.com/gif.latex?a" title="a" /> as shown in figure?</b>
+Now, how can we make *p* 
+move towards *a*
+, regardless of whether it is on the 
+left or to the right of *a* as shown in figure?
 
-Let us consider the <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-of the curve. From calculus, we know that 
-the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> 
-of a curve at a point is 
+Let us consider the *p* of the curve. From calculus, we know that 
+the *slope* of a curve at a point is 
 given by <img src="http://latex.codecogs.com/gif.latex?\mathrm&space;dy/\mathrm&space;dx" title="\mathrm dy/\mathrm dx" />
 (here it is <img src="http://latex.codecogs.com/gif.latex?\mathrm&space;dL/\mathrm&space;dp" title="\mathrm dL/\mathrm dp" /> 
-where <img src="http://latex.codecogs.com/gif.latex?L&space;\rightarrow&space;Loss" title="L \rightarrow Loss" />). From the fig., 
-when <img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-is to the right of 
-<img src="http://latex.codecogs.com/gif.latex?a" title="a" />, 
-the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> is 
-obviously <img src="http://latex.codecogs.com/gif.latex?-ve" title="-ve" /> 
+where *L → Loss*). From the fig., 
+when *p* is to the right of *a*, 
+the *slope* is obviously *-ve* 
 and when it's to the right, 
-the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> 
-would be <img src="http://latex.codecogs.com/gif.latex?+ve" title="+ve" />. 
+the *slope* 
+would be *+ve*. 
 But we see that if 
-<img src="http://latex.codecogs.com/gif.latex?p" title="p" /> is to 
-the left of <img src="http://latex.codecogs.com/gif.latex?a" title="a" />, 
-some value must be added to 
-<img src="http://latex.codecogs.com/gif.latex?p" title="p" />. 
+*p* is to 
+the left of *a*, 
+some value must be added to *p*. 
 Likewise, some value must be subtracted when 
-<img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-is to the right of <img src="http://latex.codecogs.com/gif.latex?a" title="a" />.
+*p* is to the right of *a*.
+
+## Add a GIF -> Are you thinking what I'm thinking
 
 This means that when 
-<img src="http://latex.codecogs.com/gif.latex?slope&space;\rightarrow&space;-ve&space;\implies&space;p&space;=&space;p&space;&plus;&space;(some&space;\space&space;val.)" title="slope \rightarrow -ve \implies p = p + (some \space val.)" /> 
-and when <img src="http://latex.codecogs.com/gif.latex?slope&space;\rightarrow&space;&plus;ve&space;\implies&space;p&space;=&space;p&space;-&space;(some&space;\space&space;val.)" title="slope \rightarrow +ve \implies p = p - (some \space val.)" /> 
-to move towards <img src="http://latex.codecogs.com/gif.latex?a" title="a" />.
+*slope is ‒ve implies p = p + (some val.)* 
+and when *slope is +ve implies p = p - (some val.)*
+to move towards *a*.
 
-<img src="http://latex.codecogs.com/gif.latex?\therefore" title="\therefore" /> We subtract <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> itself to <img src="http://latex.codecogs.com/gif.latex?p" title="a" />. This way, slope is negated so that it could be appropriately 
-added or subtracted. The resulting equation would be, 
+∴ We subtract the *slope* from *p*. This way, the *slope* is negated and it ensures that it always moves towards *a*. The resulting equation would be, 
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?p&space;=&space;p&space;-&space;slope" title="p = p - slope" />
@@ -558,45 +526,33 @@ added or subtracted. The resulting equation would be,
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?\implies&space;p&space;=&space;p&space;-&space;\mathrm&space;dp" title="\implies p = p - \mathrm dp" />
 
-It must also be observed that if the cost is too high, 
-the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" />
- will be too high. Hence, while subtracting 
-the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" /> 
-from <img src="http://latex.codecogs.com/gif.latex?p" title="p" />, 
-<img src="http://latex.codecogs.com/gif.latex?p" title="p" /> 
-value might overshoot 
-<img src="http://latex.codecogs.com/gif.latex?a" title="a" />. 
-It implies that it is necessary to decrease the 
-value of <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" />
- so that <img src="http://latex.codecogs.com/gif.latex?p" title="p" />
- does not overshoot <img src="http://latex.codecogs.com/gif.latex?a" title="a" />. 
-Therefore, we introduce a dampening factor called 
-<img src="http://latex.codecogs.com/gif.latex?Learning&space;\&space;Rate&space;(\alpha)" title="Learning \ Rate (\alpha)" />
-to the <img src="http://latex.codecogs.com/gif.latex?slope" title="slope" />.
+It must also be observed that if the *cost* is too high, 
+the *slope* will be too high. Hence, while subtracting 
+the *slope* from *p*, 
+*p* value might overshoot *a*. 
+Hence, it is necessary to decrease the 
+value of *slope* so that *p* does not overshoot *a*. 
+Therefore, we introduce a dampening factor called the 
+*Learning Rate (α)* to the *slope*. You'll see later that by varying *α* the rate of decrease in error varies.
 
 What we finally obtain would be,
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?p&space;=&space;p&space;-&space;\alpha&space;.\mathrm&space;dp" title="p = p - \alpha .\mathrm dp" />
 
-A shown in the figure, the trajectory taken by 
-<img src="http://latex.codecogs.com/gif.latex?p" title="p" /> against 
-<img src="http://latex.codecogs.com/gif.latex?Cost" title="Cost" />
- is that of a Bel curve.
+A shown in the figure, the trajectory taken by *p* against *cost* is that of a Bel curve.
 
 This method is called the <b>Gradient Descent</b>.
 
-In our case, we use two parameters 
-<img src="http://latex.codecogs.com/gif.latex?m" title="m" /> 
-and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />. 
+In our case, we use two parameters *m* and *b*. 
 Therefore, the bel curve would be *3-dimensional* as shown in the below figure.
+
 <p align="center">
 <img src="https://media.giphy.com/media/O9rcZVmRcEGqI/giphy.gif" alt="Drawing" width="700"/>
 </p>
 
 As mentioned, you'll compute the partial derivative of the loss function w.r.t to the 
-parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> & 
-<img src="http://latex.codecogs.com/gif.latex?b" title="b" />. [<b>Note:</b> It is usually expected that you know the basic concepts of partial derivatives. However if you do not, you can refer this wondeful [Khan Academy video](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivatives/v/partial-derivatives-introduction)]
+parameters *m* & *b*. [<b>Note:</b> It is usually expected that you know the basic concepts of partial derivatives. However if you do not, you can refer this wondeful [Khan Academy video](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivatives/v/partial-derivatives-introduction)]
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?\frac{\partial&space;L}{\partial&space;m}&space;=&space;\partial{m}&space;=&space;\frac{1}{M}.\sum_{i=1}^M\Big(y'^{(i)}&space;-&space;y^{(i)}\Big).x^{(i)}\qquad--(1)" title="\frac{\partial L}{\partial m} = \partial{m} = \frac{1}{M}.\sum_{i=1}^M\Big(y'^{(i)} - y^{(i)}\Big).x^{(i)}\qquad--(1)" />
@@ -620,7 +576,7 @@ def gradient(m, b, X_train, y_train, y_pred):
 
 ### Updating the parameters
 
-Now we subtract the slope of the parameters <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and <img src="http://latex.codecogs.com/gif.latex?b" title="b" /> from their respective derivatives along with the dampening factor <img src="http://latex.codecogs.com/gif.latex?\alpha" title="\alpha" />(alpha)
+Now we subtract the slope of the parameters *m* and *b* from their respective derivatives along with the dampening factor α(alpha).
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?m&space;=&space;m&space;-&space;\alpha&space;.&space;\partial{m}&space;\qquad\qquad\qquad\&space;--(3)\\" title="m = m - \alpha . \partial{m} \qquad\qquad\qquad--(3)\\" />
@@ -640,7 +596,7 @@ def update_params(m, b, dm, db, l_r):
     return m, b
 ```
 
-From decreasing the values of <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />, they are incrementally moving towards the minima. So updating the parameters this way has to be done for many iterations, which is called <img src="http://latex.codecogs.com/gif.latex?epoch" title="epoch" />.
+From decreasing the values of *m* and *b*, they are incrementally moving towards the minima. So updating the parameters this way has to be done for many iterations, which is called *epochs*.
 
 Let us define a function ```grad_desc```, which calls both ```gradient``` 
 and ```update_params```.
@@ -781,7 +737,7 @@ Since you have trained the parameters for 60 epochs and the regression line look
 For checking the accuracy, you can take the mean of percentage error for all the test data points.
 
 <p align="center">
-<img src="http://latex.codecogs.com/gif.latex?Accuracy=&space;\frac{y_{pred}&space;-&space;y_{test}}{y_test}&space;\times&space;100" title="Accuracy= \frac{y_{pred} - y_{test}}{y_test} \times 100" />
+<img src="http://latex.codecogs.com/gif.latex?Accuracy=&space;\frac{y_{pred}&space;-&space;y_{test}}{y_{test}}&space;\times&space;100" title="Accuracy= \frac{y_{pred} - y_{test}}{y_{test}} \times 100" />
 </p>          
           
 
@@ -848,8 +804,7 @@ Similarly, the value of
 <img src="http://latex.codecogs.com/gif.latex?\therefore&space;z^{[1]}&space;=&space;\begin{bmatrix}&space;z_1^{[1]}&space;&&space;z_2^{[1]}&space;\end{bmatrix}" title="\therefore z^{[1]} = \begin{bmatrix} z_1^{[1]} & z_2^{[1]} \end{bmatrix}" />
 
 
-Now the output from the <img src="http://latex.codecogs.com/gif.latex?2^{nd}" title="2^{nd}" /> 
-layer will be:
+Now the output from the 2ⁿᵈ layer will be:
 
 <p align="center">
 <img src="http://latex.codecogs.com/gif.latex?z^{[2]}&space;=&space;z^{[1]}.w^{[2]}&space;=&space;w_{0}^{[2]}&space;&plus;&space;w_{1}^{[2]}.z_1^{[1]}&space;&plus;&space;w_{2}^{[2]}.z_2^{[1]}" title="z^{[2]} = z^{[1]}.w^{[2]} = w_{0}^{[2]} + w_{1}^{[2]}.z_1^{[1]} + w_{2}^{[2]}.z_2^{[1]}" />
