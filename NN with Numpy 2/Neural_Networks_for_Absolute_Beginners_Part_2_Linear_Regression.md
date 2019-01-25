@@ -160,7 +160,7 @@ def plot_datapoints(X, y):
 
 
 ```python
->>>plot_graph(X, y)
+plot_datapoints(X, y)
 ```
 <p align="center">
 <img src="https://github.com/SurajDonthi/Article-Tutorials/blob/master/NN%20with%20Numpy%202/Images/output_16_0.png"/>
@@ -171,8 +171,8 @@ Let's check the shape of the vectors for consistency.
 
 
 ```python
->>>print('Shape of vector X:', X.shape)
->>>print('Shape of vector y:', y.shape)
+print('Shape of vector X:', X.shape)
+print('Shape of vector y:', y.shape)
 ```
 
 
@@ -191,8 +191,8 @@ def reset_sizes(*args):
 
 ```python
 # Reset the size from (200,) -> (200, 1)
->>>X, y = reset_sizes(X, y)
->>>X.shape
+X, y = reset_sizes(X, y)
+print(X.shape)
 ```
 
 
@@ -222,8 +222,8 @@ Let's check the shape of the Train and Test datasets created.
 
 
 ```python
->>>print(X_train.shape, y_train.shape)
->>>print(X_test.shape, y_test.shape)
+print(X_train.shape, y_train.shape)
+print(X_test.shape, y_test.shape)
 ```
 
     (160, 1) (160, 1)
@@ -253,7 +253,7 @@ def init_params():
 
 ```python
 # Call function to generate paramets
->>>m, b = init_params()
+m, b = init_params()
 ```
 
 Now, given <img src="http://latex.codecogs.com/gif.latex?m" title="m" /> & 
@@ -311,7 +311,7 @@ def plot_pred_line(X, y, m, b):
 
 
 ```python
->>>plot_pred_line(X_train, y_train, m, b)
+plot_pred_line(X_train, y_train, m, b)
 ```
 
 
@@ -346,7 +346,7 @@ def forward_prop(X, m, b):
 
 
 ```python
->>>y_pred = forward_prop(X_train, m, b)
+y_pred = forward_prop(X_train, m, b)
 ```
 
 ## Cost/Loss Function
@@ -387,11 +387,11 @@ def compute_loss(y, y_pred):
 
 
 ```python
->>>losses = []
+losses = []
 ```
 
 ```python
->>>compute_loss(y_train, y_pred)
+compute_loss(y_train, y_pred)
 ```
 
 
@@ -470,7 +470,7 @@ and <img src="http://latex.codecogs.com/gif.latex?b" title="b" />.
 
 
 ```python
->>>plot_pred_line(X_train, y_train, m, b,losses)
+plot_pred_line(X_train, y_train, m, b,losses)
 ```
 
 <p align="center">
