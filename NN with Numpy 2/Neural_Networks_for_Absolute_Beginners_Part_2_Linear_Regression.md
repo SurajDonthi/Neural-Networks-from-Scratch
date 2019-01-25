@@ -138,7 +138,7 @@ Hence, you must choose only one feature.
 
 
 ```python
->>>X, y = make_regression(n_samples=M, n_features=n, n_informative=n, 
+X, y = make_regression(n_samples=M, n_features=n, n_informative=n, 
                              n_targets=1, random_state=42, noise=10)
 ```
 
